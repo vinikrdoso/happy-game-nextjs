@@ -1,26 +1,96 @@
 @import "tailwindcss";
 
+/* Configure dark mode to use class instead of media query */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Light Mode - Default */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Neutral Colors - Light Mode */
+  --neutral-black: #0D0D0D;
+  --neutral-grey-1: #F5F5F5;
+  --neutral-grey-2: #E5E5E5;
+  --neutral-grey-3: #4A4A4A;
+  --neutral-white: #FFFFFF;
+
+  /* Primary Colors - Green (same for both modes) */
+  --primary-green-darker-2: #009952;
+  --primary-green-darker-1: #00CC6D;
+  --primary-green-base: #00FF88;
+  --primary-green-lighter-1: #33FFA0;
+  --primary-green-lighter-2: #66FFB8;
+
+  /* Secondary Colors - Pink (same for both modes) */
+  --secondary-pink-darker-2: #991C3B;
+  --secondary-pink-darker-1: #CC254F;
+  --secondary-pink-base: #FF2E63;
+  --secondary-pink-lighter-1: #FF5882;
+  --secondary-pink-lighter-2: #FF82A1;
+
+  /* Semantic Colors - Light Mode */
+  --background: var(--neutral-white);
+  --foreground: var(--neutral-black);
+  --surface: var(--neutral-grey-1);
+  --border: var(--neutral-grey-2);
+  --text-muted: var(--neutral-grey-3);
+
+  /* Fonts */
+  --font-heading: var(--font-orbitron);
+  --font-body: var(--font-roboto);
 }
 
 @theme inline {
+  /* Neutral Colors */
+  --color-neutral-black: var(--neutral-black);
+  --color-neutral-grey-1: var(--neutral-grey-1);
+  --color-neutral-grey-2: var(--neutral-grey-2);
+  --color-neutral-grey-3: var(--neutral-grey-3);
+  --color-neutral-white: var(--neutral-white);
+
+  /* Primary Colors - Green */
+  --color-primary-green-darker-2: var(--primary-green-darker-2);
+  --color-primary-green-darker-1: var(--primary-green-darker-1);
+  --color-primary-green-base: var(--primary-green-base);
+  --color-primary-green-lighter-1: var(--primary-green-lighter-1);
+  --color-primary-green-lighter-2: var(--primary-green-lighter-2);
+
+  /* Secondary Colors - Pink */
+  --color-secondary-pink-darker-2: var(--secondary-pink-darker-2);
+  --color-secondary-pink-darker-1: var(--secondary-pink-darker-1);
+  --color-secondary-pink-base: var(--secondary-pink-base);
+  --color-secondary-pink-lighter-1: var(--secondary-pink-lighter-1);
+  --color-secondary-pink-lighter-2: var(--secondary-pink-lighter-2);
+
+  /* Semantic Colors */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-surface: var(--surface);
+  --color-border: var(--border);
+  --color-text-muted: var(--text-muted);
+
+  /* Fonts */
+  --font-heading: var(--font-orbitron);
+  --font-body: var(--font-roboto);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Dark Mode - Primary Mode */
+.dark {
+  /* Neutral Colors - Dark Mode */
+  --neutral-black: #0D0D0D;
+  --neutral-grey-1: #1A1A1A;
+  --neutral-grey-2: #2D2D2D;
+  --neutral-grey-3: #B0B0B0;
+  --neutral-white: #FFFFFF;
+
+  /* Semantic Colors - Dark Mode */
+  --background: var(--neutral-black);
+  --foreground: var(--neutral-white);
+  --surface: var(--neutral-grey-1);
+  --border: var(--neutral-grey-2);
+  --text-muted: var(--neutral-grey-3);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-body), Arial, Helvetica, sans-serif;
 }
