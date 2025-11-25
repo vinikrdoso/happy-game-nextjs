@@ -50,7 +50,9 @@ export default function RootLayout({
         className={`${orbitron.variable} ${roboto.variable} antialiased flex flex-col min-h-screen`}
       >
         <Header />
-        <main className="flex-1 h-[calc(100vh-72px-330px)]">{children}</main>
+        <main className="mx-auto max-w-[1320px] w-full flex-1 h-[calc(100vh-72px-330px)]">
+          {children}
+        </main>
         <Footer />
       </body>
     </html>
