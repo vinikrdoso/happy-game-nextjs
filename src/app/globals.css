@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import "tw-animate-css";
 
 /* Configure dark mode to use class instead of media query */
 @custom-variant dark (&:where(.dark, .dark *));
@@ -33,9 +34,20 @@
   --border: var(--neutral-grey-2);
   --text-muted: var(--neutral-grey-3);
 
+  /* Component Colors - Light Mode */
+  --primary: var(--primary-green-darker-2);
+  --primary-foreground: var(--neutral-black);
+  --secondary: var(--neutral-black);
+  --secondary-foreground: var(--primary-green-base);
+  --destructive: var(--secondary-pink-base);
+  --destructive-foreground: var(--neutral-white);
+  --ring: var(--neutral-grey-3);
+  --input: var(--neutral-grey-2);
+
   /* Fonts */
   --font-heading: var(--font-orbitron);
   --font-body: var(--font-roboto);
+  --radius: 0.625rem;
 }
 
 @theme inline {
@@ -67,6 +79,16 @@
   --color-border: var(--border);
   --color-text-muted: var(--text-muted);
 
+  /* Component Colors */
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+
   /* Fonts */
   --font-heading: var(--font-orbitron);
   --font-body: var(--font-roboto);
@@ -87,10 +109,27 @@
   --surface: var(--neutral-grey-1);
   --border: var(--neutral-grey-2);
   --text-muted: var(--neutral-grey-3);
+
+  /* Component Colors - Dark Mode */
+  --primary: var(--primary-green-base);
+  --primary-foreground: var(--neutral-black);
+  --secondary: var(--neutral-black);
+  --secondary-foreground: var(--primary-green-base);
+  --destructive: var(--secondary-pink-base);
+  --destructive-foreground: var(--neutral-white);
+  --ring: var(--neutral-grey-3);
+  --input: var(--neutral-grey-2);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
   font-family: var(--font-body), Arial, Helvetica, sans-serif;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
 }
