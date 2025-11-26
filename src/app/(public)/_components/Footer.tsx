@@ -18,14 +18,11 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="bg-primary-green-darker-1 dark:bg-neutral-black text-neutral-black dark:text-neutral-white py-8 px-4 h-[330px] flex flex-col justify-between">
-      {/* Top Section - Logo and Social Media */}
+    <footer className="bg-primary-green-darker-1 dark:bg-neutral-950 text-neutral-950 dark:text-neutral-50 py-8 px-4 h-[330px] flex flex-col justify-between">
       <div className="flex flex-col items-center gap-6">
-        {/* Logo */}
         <Logo variant="black" size="lg" className="dark:hidden" />
         <Logo variant="white" size="lg" className="hidden dark:block" />
 
-        {/* Social Media Icons */}
         <div className="flex items-center gap-3">
           {socialLinks.map((social) => {
             const Icon = social.icon;
@@ -34,7 +31,7 @@ export default function Footer() {
                 key={social.label}
                 variant="outline"
                 size="icon"
-                className="bg-color-neutral-grey-1 dark:bg-color-neutral-grey-2 border-0 hover:bg-color-neutral-grey-2 dark:hover:bg-color-neutral-grey-1"
+                className="bg-neutral-100 dark:bg-neutral-800 border-0 hover:bg-neutral-200 dark:hover:bg-neutral-900"
                 aria-label={social.label}
                 asChild
               >
@@ -47,10 +44,8 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Separator */}
       <div className="border-t border-color-border" />
 
-      {/* Middle Section - Legal Links */}
       <nav className="flex justify-center items-center gap-6 flex-wrap">
         {legalLinks.map((link) => (
           <Link
@@ -63,7 +58,6 @@ export default function Footer() {
         ))}
       </nav>
 
-      {/* Bottom Section - Copyright */}
       <div className="text-center text-sm text-color-text-muted">
         © 2025 Happy Game. Todos os direitos reservados.
       </div>

@@ -1,7 +1,225 @@
-export default function Plataforma() {
+import {
+  TeamMemberCard,
+  type TeamMember,
+} from "@/app/(public)/_components/TeamMemberCard";
+import {
+  CommitmentCard,
+  type Commitment,
+} from "@/app/(public)/_components/CommitmentCard";
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/components/ui/Table";
+import {
+  Gamepad2,
+  TrendingUp,
+  FileText,
+  Users,
+  Trophy,
+  Leaf,
+  type LucideIcon,
+} from "lucide-react";
+
+interface PlatformResource {
+  id: string;
+  category: string;
+  resource: string;
+  description: string;
+  icon: string;
+}
+
+async function getTeamMembers(): Promise<TeamMember[]> {
+  try {
+    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
+    const res = await fetch(`${baseUrl}/data/team-members.json`, {
+      next: { revalidate: 3600 },
+    });
+
+    if (!res.ok) {
+      throw new Error("Failed to fetch team members");
+    }
+
+    return res.json();
+  } catch (error) {
+    console.error("Error fetching team members:", error);
+    return [];
+  }
+}
+
+async function getPlatformResources(): Promise<PlatformResource[]> {
+  try {
+    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
+    const res = await fetch(`${baseUrl}/data/platform-resources.json`, {
+      next: { revalidate: 3600 },
+    });
+
+    if (!res.ok) {
+      throw new Error("Failed to fetch platform resources");
+    }
+
+    return res.json();
+  } catch (error) {
+    console.error("Error fetching platform resources:", error);
+    return [];
+  }
+}
+
+async function getCommitments(): Promise<Commitment[]> {
+  try {
+    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
+    const res = await fetch(`${baseUrl}/data/commitments.json`, {
+      next: { revalidate: 3600 },
+    });
+
+    if (!res.ok) {
+      throw new Error("Failed to fetch commitments");
+    }
+
+    return res.json();
+  } catch (error) {
+    console.error("Error fetching commitments:", error);
+    return [];
+  }
+}
+
+const iconMap: Record<string, LucideIcon> = {
+  Gamepad2,
+  TrendingUp,
+  FileText,
+  Users,
+  Trophy,
+};
+
+export default async function Plataforma() {
+  const members = await getTeamMembers();
+  const resources = await getPlatformResources();
+  const commitments = await getCommitments();
+
   return (
-    <div className="min-h-screen bg-color-background text-color-foreground p-8">
-      <h1 className="font-heading text-4xl mb-4">Plataforma</h1>
+    <div className="min-h-screen bg-color-background text-neutral-950 dark:text-neutral-50 mx-auto space-y-12">
+      <section className="bg-background-secondary">
+        <div className="p-8 max-w-[1320px] mx-auto">
+          <div className="text-center mb-8">
+            <h2 className="font-heading text-4xl font-bold mb-4">
+              Recursos da Plataforma
+            </h2>
+            <p className="text-color-text-muted max-w-2xl mx-auto">
+              Descubra tudo que nossa plataforma oferece para gamers e
+              desenvolvedores em uma experiência completa e inovadora.
+            </p>
+          </div>
+
+          <div className="rounded-lg overflow-hidden border border-border">
+            <Table>
+              <TableHeader>
+                <TableRow className="bg-primary text-primary-foreground hover:bg-primary">
+                  <TableHead className="text-primary-foreground font-semibold">
+                    Categoria
+                  </TableHead>
+                  <TableHead className="text-primary-foreground font-semibold">
+                    Recurso
+                  </TableHead>
+                  <TableHead className="text-primary-foreground font-semibold">
+                    Descrição
+                  </TableHead>
+                </TableRow>
+              </TableHeader>
+              <TableBody>
+                {resources.map((resource) => {
+                  const Icon = iconMap[resource.icon] || Gamepad2;
+                  return (
+                    <TableRow
+                      key={resource.id}
+                      className="bg-background-primary"
+                    >
+                      <TableCell>
+                        <div className="flex items-center gap-2">
+                          <Icon className="h-5 w-5 text-primary-green-base" />
+                          <span className="font-medium">
+                            {resource.category}
+                          </span>
+                        </div>
+                      </TableCell>
+                      <TableCell className="font-medium">
+                        {resource.resource}
+                      </TableCell>
+                      <TableCell className="text-color-text-muted">
+                        {resource.description}
+                      </TableCell>
+                    </TableRow>
+                  );
+                })}
+              </TableBody>
+            </Table>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-background">
+        <div className="p-8 max-w-[1320px] mx-auto">
+          <div className="text-center mb-12">
+            <h1 className="font-heading text-4xl font-bold mb-4 text-neutral-950 dark:text-neutral-50">
+              Nosso Compromisso com a Comunidade
+            </h1>
+            <p className="text-color-text-muted max-w-2xl mx-auto">
+              Construímos uma plataforma sustentável, transparente e inclusiva
+              para todos os gamers.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {commitments.map((commitment) => (
+              <CommitmentCard key={commitment.id} commitment={commitment} />
+            ))}
+          </div>
+        </div>
+
+        <div className="bg-background p-8 max-w-[1320px] mx-auto">
+          <div
+            className="rounded-lg p-6 md:p-8"
+            style={{ background: "var(--gradient-sustainability)" }}
+          >
+            <div className="flex flex-col md:flex-row items-start md:items-center gap-4 md:gap-6">
+              <div className="shrink-0">
+                <Leaf className="h-12 w-12 text-primary-green-base" />
+              </div>
+              <div className="flex-1">
+                <h3 className="font-heading text-xl md:text-2xl font-bold mb-2 text-neutral-50">
+                  Sustentabilidade Digital:
+                </h3>
+                <p className="text-neutral-50 text-sm md:text-base">
+                  Comprometidos com práticas de desenvolvimento sustentável,
+                  otimização de recursos e redução de impacto ambiental em nossa
+                  infraestrutura.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-background-primary">
+        <div className="p-8 max-w-[1320px] mx-auto">
+          <div className="text-center mb-8">
+            <h2 className="font-heading text-4xl font-bold mb-4">
+              Conheça Nossa Equipe
+            </h2>
+            <p className="text-color-text-muted max-w-2xl mx-auto">
+              Conheça nossa equipe de desenvolvedores e designers que trabalham
+              para criar a melhor plataforma para gamers.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            {members.map((member) => (
+              <TeamMemberCard key={member.id} member={member} />
+            ))}
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
