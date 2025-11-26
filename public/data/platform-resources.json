@@ -1,0 +1,45 @@
+[
+  {
+    "id": "1",
+    "category": "Jogos",
+    "resource": "Catálogo de Jogos",
+    "description": "Biblioteca completa com jogos de diferentes gêneros e plataformas",
+    "icon": "Gamepad2"
+  },
+  {
+    "id": "2",
+    "category": "Análise",
+    "resource": "Análise de Vendas",
+    "description": "Relatórios detalhados sobre performance de vendas e métricas",
+    "icon": "TrendingUp"
+  },
+  {
+    "id": "3",
+    "category": "Conteúdo",
+    "resource": "Sistema de Posts",
+    "description": "Criação e compartilhamento de conteúdo sobre jogos",
+    "icon": "FileText"
+  },
+  {
+    "id": "4",
+    "category": "Social",
+    "resource": "Interação entre Usuários",
+    "description": "Chat, fóruns e sistema de amigos para conectar gamers",
+    "icon": "Users"
+  },
+  {
+    "id": "5",
+    "category": "Gamificação",
+    "resource": "Sistema de Conquistas",
+    "description": "Badges, rankings e desafios para engajar os usuários",
+    "icon": "Trophy"
+  },
+  {
+    "id": "6",
+    "category": "Comunidade",
+    "resource": "Diversidade & Inclusão",
+    "description": "Espaço acolhedor para gamers de todas as origens, etnias, identidades e culturas.",
+    "icon": "Users"
+  }
+]
+

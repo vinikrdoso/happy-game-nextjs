@@ -1,0 +1,39 @@
+[
+  {
+    "id": "code-of-conduct",
+    "title": "Código de Conduta",
+    "description": "Promovemos o respeito mútuo e tolerância zero ao assédio, discriminação ou comportamento tóxico. Nossa comunidade é construída sobre fair play e colaboração.",
+    "icon": "Shield",
+    "points": [
+      "Respeito e empatia entre membros",
+      "Zero tolerância ao assédio",
+      "Moderação ativa e transparente",
+      "Política anti-discriminação rigorosa"
+    ]
+  },
+  {
+    "id": "transparency",
+    "title": "Transparência",
+    "description": "Mantemos comunicação aberta sobre decisões, atualizações e uso de dados. Acreditamos que a transparência constrói confiança e fortalece nossa comunidade.",
+    "icon": "Eye",
+    "points": [
+      "Relatórios de moderação públicos",
+      "Changelog detalhado de atualizações",
+      "Privacidade e proteção de dados",
+      "Feedback contínuo da comunidade"
+    ]
+  },
+  {
+    "id": "inclusive-environment",
+    "title": "Ambiente Inclusivo",
+    "description": "Celebramos a diversidade e garantimos que todos tenham voz. Oferecemos um espaço acessível e acolhedor para gamers de todas as origens, identidades e habilidades.",
+    "icon": "Users",
+    "points": [
+      "Acessibilidade em primeiro lugar",
+      "Representatividade em destaque",
+      "Suporte multilíngue e cultural",
+      "Comunidades para todos os perfis"
+    ]
+  }
+]
+

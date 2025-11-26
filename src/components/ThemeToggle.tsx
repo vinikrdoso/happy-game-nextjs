@@ -81,7 +81,7 @@ export function ThemeToggle() {
       variant="outline"
       size="icon"
       onClick={handleToggle}
-      className="border-primary-green-base bg-transparent hover:bg-surface"
+      className="border-primary-green-base bg-transparent hover:bg-background-primary"
       aria-label={`Current theme: ${theme}. Click to toggle.`}
       title={`Theme: ${theme}`}
     >

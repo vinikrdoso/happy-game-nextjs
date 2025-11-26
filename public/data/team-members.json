@@ -1,0 +1,38 @@
+[
+  {
+    "id": "1",
+    "name": "Ana Larissa Mendes",
+    "role": "Frontend Developer",
+    "bio": "Bailarina e mística, curte música e cozinhar.",
+    "image": "/img/profile/larissa-mendes-profile.jpeg"
+  },
+  {
+    "id": "2",
+    "name": "João Pedro Thethê Andrade",
+    "role": "Frontend Developer",
+    "bio": "Gosta de esportes, luta jiu jitsu, também gosta de jogos e música.",
+    "image": "/img/profile/joao-andrade-profile.jpeg"
+  },
+  {
+    "id": "3",
+    "name": "John Vitor Silverio Pereira",
+    "role": "Fullstack Developer",
+    "bio": "Gosta de jogos de RPG e gatos.",
+    "image": "/img/profile/john-silverio-profile.jpeg"
+  },
+  {
+    "id": "4",
+    "name": "Lyniker Vinicius Santos de Oliveira",
+    "role": "Frontend Developer",
+    "bio": "Gosta de criar conteúdos sobre tecnologia, futuro JAVA champion.",
+    "image": "/img/profile/lyniker-oliveira-profile.jpeg"
+  },
+  {
+    "id": "5",
+    "name": "Vinícius Cardoso Junqueira",
+    "role": "Frontend Developer",
+    "bio": "Gosta muito de música, é baterista e ama gatos.",
+    "image": "/img/profile/vinicius-cardoso-profile.jpeg"
+  }
+]
+

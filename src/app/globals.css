@@ -6,12 +6,19 @@
 
 /* Light Mode - Default */
 :root {
-  /* Neutral Colors - Light Mode */
+  --neutral-white:#FFFFFF;
+  --neutral-50:  #fafafa;   
+  --neutral-100: #f5f5f5;  
+  --neutral-200: #e5e5e5;  
+  --neutral-300: #d4d4d4;  
+  --neutral-400: #a1a1a1;  
+  --neutral-500: #737373;  
+  --neutral-600: #525252;  
+  --neutral-700: #404040;  
+  --neutral-800: #262626;  
+  --neutral-900: #171717;  
+  --neutral-950: #0a0a0a;  
   --neutral-black: #0D0D0D;
-  --neutral-grey-1: #F5F5F5;
-  --neutral-grey-2: #E5E5E5;
-  --neutral-grey-3: #4A4A4A;
-  --neutral-white: #FFFFFF;
 
   /* Primary Colors - Green (same for both modes) */
   --primary-green-darker-2: #009952;
@@ -28,21 +35,29 @@
   --secondary-pink-lighter-2: #FF82A1;
 
   /* Semantic Colors - Light Mode */
-  --background: var(--neutral-white);
-  --foreground: var(--neutral-black);
-  --surface: var(--neutral-grey-1);
-  --border: var(--neutral-grey-2);
-  --text-muted: var(--neutral-grey-3);
+  --background: var(--neutral-50);
+  --background-primary: var(--neutral-100);
+  --background-secondary: var(--neutral-200);
+  --background-tertiary: var(--neutral-300);
+  --border: var(--neutral-200);
+  --text-muted: var(--neutral-600);
+
+  /* Decorative */
+  --gradient-sustainability: linear-gradient(
+    135deg,
+    rgba(137, 255, 102, 0.1),
+    rgba(255, 102, 196, 0.1)
+  );
 
   /* Component Colors - Light Mode */
   --primary: var(--primary-green-darker-2);
-  --primary-foreground: var(--neutral-black);
-  --secondary: var(--neutral-black);
+  --primary-foreground: var(--neutral-950);
+  --secondary: var(--neutral-950);
   --secondary-foreground: var(--primary-green-base);
   --destructive: var(--secondary-pink-base);
-  --destructive-foreground: var(--neutral-white);
-  --ring: var(--neutral-grey-3);
-  --input: var(--neutral-grey-2);
+  --destructive-foreground: var(--neutral-50);
+  --ring: var(--neutral-600);
+  --input: var(--neutral-200);
 
   /* Fonts */
   --font-heading: var(--font-orbitron);
@@ -50,13 +65,19 @@
   --radius: 0.625rem;
 }
 
-@theme inline {
+@theme {
   /* Neutral Colors */
-  --color-neutral-black: var(--neutral-black);
-  --color-neutral-grey-1: var(--neutral-grey-1);
-  --color-neutral-grey-2: var(--neutral-grey-2);
-  --color-neutral-grey-3: var(--neutral-grey-3);
-  --color-neutral-white: var(--neutral-white);
+  --color-neutral-50: var(--neutral-50);
+  --color-neutral-100: var(--neutral-100);
+  --color-neutral-200: var(--neutral-200);
+  --color-neutral-300: var(--neutral-300);
+  --color-neutral-400: var(--neutral-400);
+  --color-neutral-500: var(--neutral-500);
+  --color-neutral-600: var(--neutral-600);
+  --color-neutral-700: var(--neutral-700);
+  --color-neutral-800: var(--neutral-800);
+  --color-neutral-900: var(--neutral-900);
+  --color-neutral-950: var(--neutral-950);
 
   /* Primary Colors - Green */
   --color-primary-green-darker-2: var(--primary-green-darker-2);
@@ -74,10 +95,12 @@
 
   /* Semantic Colors */
   --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --color-surface: var(--surface);
+  --color-background-primary: var(--background-primary);
+  --color-background-secondary: var(--background-secondary);
+  --color-background-tertiary: var(--background-tertiary);
   --color-border: var(--border);
   --color-text-muted: var(--text-muted);
+  --color-gradient-sustainability: var(--gradient-sustainability);
 
   /* Component Colors */
   --color-primary: var(--primary);
@@ -96,29 +119,28 @@
 
 /* Dark Mode - Primary Mode */
 .dark {
-  /* Neutral Colors - Dark Mode */
-  --neutral-black: #0D0D0D;
-  --neutral-grey-1: #1A1A1A;
-  --neutral-grey-2: #2D2D2D;
-  --neutral-grey-3: #B0B0B0;
-  --neutral-white: #FFFFFF;
-
   /* Semantic Colors - Dark Mode */
   --background: var(--neutral-black);
-  --foreground: var(--neutral-white);
-  --surface: var(--neutral-grey-1);
-  --border: var(--neutral-grey-2);
-  --text-muted: var(--neutral-grey-3);
+  --background-primary: var(--neutral-900);
+  --background-secondary: var(--neutral-800);
+  --background-tertiary: var(--neutral-700);
+  --border: var(--neutral-800);
+  --text-muted: var(--neutral-400);
+  --gradient-sustainability: linear-gradient(
+    135deg,
+    rgba(137, 255, 102, 0.1),
+    rgba(255, 102, 196, 0.1)
+  );
 
   /* Component Colors - Dark Mode */
   --primary: var(--primary-green-base);
-  --primary-foreground: var(--neutral-black);
-  --secondary: var(--neutral-black);
+  --primary-foreground: var(--neutral-950);
+  --secondary: var(--neutral-950);
   --secondary-foreground: var(--primary-green-base);
   --destructive: var(--secondary-pink-base);
-  --destructive-foreground: var(--neutral-white);
-  --ring: var(--neutral-grey-3);
-  --input: var(--neutral-grey-2);
+  --destructive-foreground: var(--neutral-50);
+  --ring: var(--neutral-400);
+  --input: var(--neutral-800);
 }
 
 body {
@@ -130,6 +152,6 @@ body {
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-neutral-950 dark:text-neutral-50;
   }
 }

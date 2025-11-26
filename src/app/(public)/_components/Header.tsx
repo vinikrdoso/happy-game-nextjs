@@ -19,7 +19,7 @@ export default function Header() {
   ];
 
   return (
-    <header className="flex justify-between items-center bg-primary-green-darker-1 dark:bg-neutral-black text-neutral-black dark:text-neutral-white p-4 h-[72px] border-b border-border">
+    <header className="flex justify-between items-center bg-primary-green-darker-1 dark:bg-neutral-950 text-neutral-950 dark:text-neutral-50 p-4 h-[72px] border-b border-border">
       <Logo variant="black" className="dark:hidden" />
       <Logo variant="white" className="hidden dark:block" />
 
@@ -35,7 +35,7 @@ export default function Header() {
                   className={cn(
                     "px-3 py-1.5 rounded transition-colors",
                     isActive
-                      ? "bg-primary-green-darker-2 dark:bg-primary-green-darker-2 text-neutral-white"
+                      ? "bg-primary-green-darker-2 dark:bg-primary-green-darker-2 text-neutral-50"
                       : "hover:text-primary-green-base dark:hover:text-primary-green-base"
                   )}
                 >
@@ -57,7 +57,7 @@ export default function Header() {
             <Button
               variant="outline"
               size="icon"
-              className="border-primary-green-base bg-transparent hover:bg-surface"
+              className="border-primary-green-base bg-transparent hover:bg-background-primary"
               aria-label="Toggle menu"
             >
               <Menu className="h-5 w-5" />
@@ -66,7 +66,7 @@ export default function Header() {
           </SheetTrigger>
           <SheetContent
             side="right"
-            className="w-[300px] bg-background dark:bg-neutral-black"
+            className="w-[300px] bg-background dark:bg-background"
           >
             <nav className="flex flex-col items-center gap-6 mt-8">
               {links.map((link) => {
@@ -78,8 +78,8 @@ export default function Header() {
                     className={cn(
                       "w-full text-center px-4 py-3 rounded transition-colors text-lg",
                       isActive
-                        ? "bg-primary-green-darker-2 dark:bg-primary-green-darker-2 text-neutral-white"
-                        : "hover:bg-surface"
+                        ? "bg-primary-green-darker-2 dark:bg-primary-green-darker-2 text-neutral-50"
+                        : "hover:bg-background-primary"
                     )}
                   >
                     {link.label}
