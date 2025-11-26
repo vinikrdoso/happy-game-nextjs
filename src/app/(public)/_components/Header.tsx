@@ -14,7 +14,7 @@ export default function Header() {
 
   const links = [
     { href: "/", label: "Início" },
-    { href: "/acervo", label: "História" },
+    { href: "/historia", label: "História" },
     { href: "/plataforma", label: "Plataforma" },
   ];
 
