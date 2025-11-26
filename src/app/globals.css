@@ -62,6 +62,8 @@
   /* Fonts */
   --font-heading: var(--font-orbitron);
   --font-body: var(--font-roboto);
+  --font-family-heading: var(--font-orbitron), sans-serif;
+  --font-family-body: var(--font-roboto), sans-serif;
   --radius: 0.625rem;
 }
 
@@ -112,9 +114,9 @@
   --color-ring: var(--ring);
   --color-input: var(--input);
 
-  /* Fonts */
-  --font-heading: var(--font-orbitron);
-  --font-body: var(--font-roboto);
+  /* Fonts - Tailwind v4 font-family configuration */
+  --font-family-heading: var(--font-orbitron), sans-serif;
+  --font-family-body: var(--font-roboto), sans-serif;
 }
 
 /* Dark Mode - Primary Mode */
@@ -144,7 +146,7 @@
 }
 
 body {
-  font-family: var(--font-body), Arial, Helvetica, sans-serif;
+  font-family: var(--font-roboto), sans-serif;
 }
 
 @layer base {
@@ -153,5 +155,14 @@ body {
   }
   body {
     @apply bg-background text-neutral-950 dark:text-neutral-50;
+  }
+}
+
+@layer utilities {
+  .font-heading {
+    font-family: var(--font-orbitron), sans-serif;
+  }
+  .font-body {
+    font-family: var(--font-roboto), sans-serif;
   }
 }
