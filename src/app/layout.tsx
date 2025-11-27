@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Orbitron, Roboto } from "next/font/google";
 import "@/app/globals.css";
-import { SessionProvider } from "@/components/providers/SessionProvider";
+import { SessionProvider } from "@/providers/SessionProvider";
 
 const orbitron = Orbitron({
   variable: "--font-orbitron",
