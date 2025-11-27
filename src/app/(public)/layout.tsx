@@ -1,60 +1,16 @@
-import type { Metadata } from "next";
-import { Orbitron, Roboto } from "next/font/google";
-import "@/app/globals.css";
 import Header from "@/app/(public)/_components/Header";
 import Footer from "@/app/(public)/_components/Footer";
 
-const orbitron = Orbitron({
-  variable: "--font-orbitron",
-  subsets: ["latin"],
-});
-
-const roboto = Roboto({
-  variable: "--font-roboto",
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "700"],
-});
-
-export const metadata: Metadata = {
-  title: "Happy Game",
-  icons: {
-    icon: "/img/favicon.svg",
-  },
-  description: "A primeira comunidade feita para gamers",
-};
-
-export default function RootLayout({
+export default function PublicLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <head>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              (function() {
-                const theme = localStorage.getItem('theme');
-                const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-                const shouldBeDark = theme === 'dark' || (!theme && systemPrefersDark);
-                if (shouldBeDark) {
-                  document.documentElement.classList.add('dark');
-                }
-              })();
-            `,
-          }}
-        />
-      </head>
-      <body
-        className={`${orbitron.variable} ${roboto.variable} antialiased flex flex-col min-h-screen`}
-      >
-        <Header />
-        <main className="mx-auto w-full flex-1 h-[calc(100vh-72px-330px)]">
-          {children}
-        </main>
-        <Footer />
-      </body>
-    </html>
+    <main className="mx-auto w-full flex-1 h-[calc(100vh-72px-330px)]">
+      <Header />
+      {children}
+      <Footer />
+    </main>
   );
 }
