@@ -8,7 +8,7 @@ export function StatsSection() {
             <h2 className="text-3xl lg:text-4xl font-heading font-bold">
               Estatísticas Impactantes da Indústria de Jogos
             </h2>
-            <p className="text-lg text-neutral-400">
+            <p className="text-lg dark:text-neutral-400 text-neutral-900">
               A indústria de jogos movimenta bilhões de reais anualmente,
               atraindo milhões de jogadores. Com o crescimento das plataformas
               sociais, a conexão entre gamers nunca foi tão evidente.
