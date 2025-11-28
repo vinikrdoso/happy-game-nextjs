@@ -1,17 +1,18 @@
-import { Button } from "@/components/ui/Button";
+import { HeroSection } from "./_components/HeroSection";
+import { CommunitiesSection } from "./_components/CommunitiesSection";
+import { StatsSection } from "./_components/StatsSection";
+import { CTASection } from "./_components/CTASection";
+import Image from "next/image";
+import { GameGodImage } from "./_components/GameGodImage";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-color-background text-neutral-950 dark:text-neutral-50 p-8">
-      <h1 className="font-heading text-4xl mb-4">Home</h1>
-      <div className="flex flex-wrap gap-4">
-        <Button>Click me</Button>
-        <Button variant="secondary">Click me</Button>
-        <Button variant="outline">Click me</Button>
-        <Button variant="destructive">Click me</Button>
-        <Button variant="ghost">Click me</Button>
-        <Button variant="link">Click me</Button>
-      </div>
+    <div className="min-h-screen">
+      <HeroSection />
+      <CommunitiesSection />
+      <StatsSection />
+      <GameGodImage />
+      <CTASection />
     </div>
   );
 }

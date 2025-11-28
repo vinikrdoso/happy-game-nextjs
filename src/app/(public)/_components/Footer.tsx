@@ -23,20 +23,20 @@ export default function Footer() {
         <Logo variant="black" size="lg" className="dark:hidden" />
         <Logo variant="white" size="lg" className="hidden dark:block" />
 
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-4">
           {socialLinks.map((social) => {
             const Icon = social.icon;
             return (
               <Button
                 key={social.label}
                 variant="outline"
-                size="icon"
+                size="icon-xl"
                 className="bg-neutral-100 dark:bg-neutral-800 border-0 hover:bg-neutral-200 dark:hover:bg-neutral-900"
                 aria-label={social.label}
                 asChild
               >
                 <Link href={social.href}>
-                  <Icon className="h-5 w-5" />
+                  <Icon />
                 </Link>
               </Button>
             );
