@@ -49,15 +49,14 @@ const communities = [
 
 export function CommunitiesSection() {
   return (
-    // <section className="py-20 bg-linear-to-b from-neutral-800 to-neutral-900">
-    <section className="py-20 bg-[linear-gradient(135deg,#1A1A1A_0%,#252525_50%,#1A1A1A_100%)]">
+    <section className="py-20 dark:bg-[linear-gradient(135deg,#1A1A1A_0%,#252525_50%,#1A1A1A_100%)] bg:background-tertiary">
       <div className="container mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-16 max-w-3xl mx-auto">
           <h2 className="text-3xl lg:text-5xl font-heading font-bold mb-4">
             Descubra sua comunidade gamer
           </h2>
-          <p className="text-lg text-neutral-400">
+          <p className="text-lg dark:text-neutral-400 text-neutral-600">
             Nostálgico dos clássicos? Competitivo nas ranked? Ou só curte jogar?
             Aqui todo gamer tem seu espaço para brilhar e se conectar.
           </p>
@@ -68,7 +67,7 @@ export function CommunitiesSection() {
           {communities.map((community, index) => (
             <Card
               key={index}
-              className="h-full flex flex-col overflow-hidden border-neutral-700 hover:border-primary-green-base hover:-translate-y-2 transition-all duration-300 hover:shadow-lg hover:shadow-primary-green-base/20"
+              className="h-full flex flex-col  cursor-pointer overflow-hidden border-neutral-700 hover:border-primary-green-base hover:-translate-y-2 transition-all duration-300 hover:shadow-lg hover:shadow-primary-green-base/20"
             >
               <div className="aspect-video overflow-hidden relative">
                 <Image

@@ -45,7 +45,7 @@ export default function Header() {
                       "px-3 py-3 rounded transition-colors font-medium",
                       isActive
                         ? "bg-primary-green-darker-2 dark:bg-primary-green-darker-2/30 text-primary-green-base"
-                        : "hover:bg-primary-green-base dark:hover:bg-gray-500/15 text-gray-300 hover:text-white"
+                        : "hover:bg-primary-green-base dark:hover:bg-gray-500/15 dark:text-gray-300 text-gray-900 hover:text-white"
                     )}
                   >
                     {link.label}

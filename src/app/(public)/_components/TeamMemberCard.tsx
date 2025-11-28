@@ -15,7 +15,7 @@ interface TeamMemberCardProps {
 
 export function TeamMemberCard({ member }: TeamMemberCardProps) {
   return (
-    <div className="rounded-lg overflow-hidden border border-border">
+    <div className="rounded-lg overflow-hidden border border-border hover:transition-transform hover:scale-[1.02] cursor-pointer">
       <div className="relative w-full aspect-square">
         <Image
           src={member.image}
@@ -25,7 +25,7 @@ export function TeamMemberCard({ member }: TeamMemberCardProps) {
         />
       </div>
 
-      <div className="p-4 bg-background-secondary space-y-3 h-full">
+      <div className="p-4 bg-background-secondary space-y-3 h-full  ">
         <h3 className="text-lg font-heading font-bold text-neutral-950 dark:text-neutral-50 text-center">
           {member.name}
         </h3>

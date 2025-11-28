@@ -107,7 +107,7 @@ export default async function Plataforma() {
             <h2 className="font-heading text-4xl font-bold mb-4">
               Recursos da Plataforma
             </h2>
-            <p className="text-color-text-muted max-w-2xl mx-auto">
+            <p className="text-color-text-muted max-w-2xl mx-auto font-heading p-3  font-semibold text-4xl">
               Descubra tudo que nossa plataforma oferece para gamers e
               desenvolvedores em uma experiência completa e inovadora.
             </p>
