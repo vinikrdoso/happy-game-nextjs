@@ -4,6 +4,7 @@ import { StatsSection } from "./_components/StatsSection";
 import { CTASection } from "./_components/CTASection";
 import Image from "next/image";
 import { GameGodImage } from "./_components/GameGodImage";
+import { KonamiCodeEasterEgg } from "./_components/KonamiCodeEasterEgg";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <StatsSection />
       <GameGodImage />
       <CTASection />
+      <KonamiCodeEasterEgg />
     </div>
   );
 }

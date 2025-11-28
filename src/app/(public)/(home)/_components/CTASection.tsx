@@ -19,7 +19,7 @@ export function CTASection() {
                 Inscreva-se
               </Button>
             </Link>
-            <Link href="/platform">
+            <Link href="/plataforma">
               <Button variant="outline" size="lg" className="text-lg px-8">
                 Saiba mais
               </Button>
