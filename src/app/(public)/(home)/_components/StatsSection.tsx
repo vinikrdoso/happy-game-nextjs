@@ -1,6 +1,6 @@
 export function StatsSection() {
   return (
-    <section className="py-20 bg-neutral-900">
+    <section className="py-20 dark:bg-neutral-900 bg-neutral-200">
       <div className="p-4 max-w-[1344px] mx-auto">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Text */}

@@ -19,7 +19,7 @@ export function HeroSection() {
               reviva os melhores momentos e descubra novas aventuras em uma
               comunidade feita para quem ama gamers.
             </p>
-            <Link href="/platform">
+            <Link href="/plataforma">
               <Button size="lg" className="text-lg px-8">
                 <Rocket className="h-5 w-5" />
                 Acesse

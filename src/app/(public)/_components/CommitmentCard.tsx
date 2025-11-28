@@ -22,7 +22,7 @@ export function CommitmentCard({ commitment }: CommitmentCardProps) {
   const Icon = iconMap[commitment.icon] || Shield;
 
   return (
-    <div className="rounded-lg bg-background-primary p-6 space-y-4">
+    <div className="rounded-lg bg-background-primary p-6 space-y-4 cursor-pointer hover:transition-transform hover:scale-[1.02] border border-border">
       <div className="flex justify-center">
         <div className="rounded-full bg-primary-green-base p-4">
           <Icon className="h-8 w-8 text-neutral-950" />
