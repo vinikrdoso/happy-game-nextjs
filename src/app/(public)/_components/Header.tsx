@@ -54,8 +54,8 @@ export default function Header() {
               );
             })}
           </ul>
-          <Button size="lg" variant="default">
-            Inscreva-se
+          <Button size="lg" variant="default" asChild>
+            <Link href="/cadastro">Inscreva-se</Link>
           </Button>
           <ThemeToggle />
         </nav>
@@ -97,8 +97,8 @@ export default function Header() {
                     </Link>
                   );
                 })}
-                <Button variant="default" className="w-full">
-                  Inscreva-se
+                <Button variant="default" className="w-full" asChild>
+                  <Link href="/cadastro">Inscreva-se</Link>
                 </Button>
               </nav>
             </SheetContent>
