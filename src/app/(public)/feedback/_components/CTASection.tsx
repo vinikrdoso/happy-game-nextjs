@@ -6,67 +6,46 @@ import Link from "next/link";
 
 export function CTASection() {
   return (
-    <section
-      className="
-        // Spacing
-        py-16 md:py-24
-        // Background
-        bg-gradient-to-br from-background to-background-primary
-      "
-    >
+    <section className="py-16 md:py-24 bg-linear-to-br from-background to-background-primary">
       <div className="container mx-auto px-4">
         <div className="mx-auto max-w-3xl text-center">
           {/* Title */}
           <h3
-            className="
-              // Typography
-              font-heading text-3xl md:text-4xl font-bold
-              // Spacing
-              mb-6
-              // Animation
-              animate-fadeIn
-            "
+            className="font-heading text-3xl md:text-4xl font-bold mb-6
+              animate-fadeIn"
           >
             Siga nossa jornada nas redes sociais
           </h3>
 
           {/* Description */}
           <p
-            className="
-              // Typography
-              text-lg text-text-muted
-              // Spacing
-              mb-8
-              // Animation
-              animate-fadeIn
-            "
-            style={{ animationDelay: "0.1s", opacity: 0, animationFillMode: "forwards" }}
+            className="text-lg text-text-muted mb-8 animate-fadeIn"
+            style={{
+              animationDelay: "0.1s",
+              opacity: 0,
+              animationFillMode: "forwards",
+            }}
           >
-            Fique por dentro de todas as novidades, lançamentos e eventos exclusivos da nossa
-            comunidade gamer. Acompanhe nosso conteúdo e faça parte dessa história épica!
+            Fique por dentro de todas as novidades, lançamentos e eventos
+            exclusivos da nossa comunidade gamer. Acompanhe nosso conteúdo e
+            faça parte dessa história épica!
           </p>
 
           {/* CTA Button */}
           <div
-            className="
-              // Layout
-              flex flex-col sm:flex-row
-              gap-4
-              justify-center
-              // Animation
-              animate-fadeIn
-            "
-            style={{ animationDelay: "0.2s", opacity: 0, animationFillMode: "forwards" }}
+            className="flex flex-col sm:flex-row gap-4 justify-center animate-fadeIn"
+            style={{
+              animationDelay: "0.2s",
+              opacity: 0,
+              animationFillMode: "forwards",
+            }}
           >
             <Button size="lg" asChild>
               <a
                 href="https://instagram.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="
-                  // Layout
-                  inline-flex items-center gap-2
-                "
+                className=" inline-flex items-center gap-2"
               >
                 <Instagram className="h-5 w-5" />
                 Seguir no Instagram
@@ -80,21 +59,16 @@ export function CTASection() {
 
           {/* Success Message */}
           <div
-            className="
-              // Spacing
-              mt-12 p-6
-              // Border & Background
-              rounded-2xl
-              border border-border
-              bg-primary/5 dark:bg-primary/10
-              // Animation
-              animate-fadeIn
-            "
-            style={{ animationDelay: "0.3s", opacity: 0, animationFillMode: "forwards" }}
+            className=" mt-12 p-6 rounded-2xl border border-border bg-primary/5 dark:bg-primary/10 animate-fadeIn"
+            style={{
+              animationDelay: "0.3s",
+              opacity: 0,
+              animationFillMode: "forwards",
+            }}
           >
             <p className="text-text-muted">
-              📧 <strong>Fique atento!</strong> Em breve você receberá um e-mail com mais
-              informações sobre como participar da nossa comunidade.
+              📧 <strong>Fique atento!</strong> Em breve você receberá um e-mail
+              com mais informações sobre como participar da nossa comunidade.
             </p>
           </div>
         </div>

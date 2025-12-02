@@ -41,11 +41,14 @@ function validateField(
       return undefined;
 
     case "phone":
-     //opicional
+      // Campo opcional - apenas valida se preenchido
       if (typeof value === "string" && value.trim() !== "") {
-        const phoneRegex = /^\(\d{2}\)\s\d{5}-\d{4}$/;
-        if (!phoneRegex.test(value)) {
-          return "Formato: (00) 00000-0000";
+        // Remove caracteres não numéricos para validação
+        const numbersOnly = value.replace(/\D/g, "");
+
+        // Valida se tem entre 10 e 11 dígitos (DDD + número)
+        if (numbersOnly.length < 10 || numbersOnly.length > 11) {
+          return "Telefone deve ter 10 ou 11 dígitos";
         }
       }
       return undefined;

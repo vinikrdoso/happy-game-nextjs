@@ -3,7 +3,6 @@ export function StatsSection() {
     <section className="py-20 dark:bg-neutral-900 bg-neutral-200">
       <div className="p-4 max-w-[1344px] mx-auto">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Text */}
           <div className="space-y-6">
             <h2 className="text-3xl lg:text-4xl font-heading font-bold">
               Estatísticas Impactantes da Indústria de Jogos
