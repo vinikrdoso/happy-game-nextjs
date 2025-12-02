@@ -14,7 +14,7 @@ export function HeroSection() {
               Descubra a primeira comunidade feita para{" "}
               <span className="dark:text-primary-green-base">gamers</span>
             </h1>
-            <p className="text-lg text-neutral-400">
+            <p className="text-lg dark:text-neutral-400 text-neutral-600">
               Conecte-se com outros jogadores, compartilhe suas conquistas,
               reviva os melhores momentos e descubra novas aventuras em uma
               comunidade feita para quem ama gamers.
@@ -31,7 +31,7 @@ export function HeroSection() {
           <div className="order-1 lg:order-2 animate-fadeIn">
             <div className="relative w-full aspect-video rounded-lg overflow-hidden">
               <Image
-                src="/img/mario-sonic.png"
+                src="/img/sonic.png"
                 alt="Mario, Minecraft, Sonic"
                 fill
                 className="object-cover"
