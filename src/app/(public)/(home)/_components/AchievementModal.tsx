@@ -12,8 +12,6 @@ export function AchievementModal({ isOpen, onClose }: AchievementModalProps) {
 
   useEffect(() => {
     if (isOpen) {
-      setShow(true);
-      // Auto-close após 5 segundos
       const timer = setTimeout(() => {
         handleClose();
       }, 5000);
@@ -23,7 +21,7 @@ export function AchievementModal({ isOpen, onClose }: AchievementModalProps) {
 
   const handleClose = () => {
     setShow(false);
-    setTimeout(() => onClose(), 300); // Aguarda animação antes de fechar
+    setTimeout(() => onClose(), 300);
   };
 
   if (!isOpen) return null;
@@ -80,30 +78,26 @@ export function AchievementModal({ isOpen, onClose }: AchievementModalProps) {
 
           {/* Body */}
           <div className="px-6 py-8 text-center">
-            {/* Ícone do troféu com animação */}
             <div className="mb-6 relative inline-block">
               <div className="absolute inset-0 blur-xl bg-yellow-500/50 animate-pulse" />
               <div className="relative text-8xl animate-bounce-slow">🏆</div>
             </div>
 
-            {/* Título */}
             <h3 className="text-3xl font-bold text-white mb-4 animate-fade-in">
               Parabéns, verdadeiro gamer!
             </h3>
 
-            {/* Descrição */}
             <p className="text-gray-300 text-lg mb-6 animate-fade-in-delay">
               Você desbloqueou o easter egg secreto!
             </p>
 
-            {/* Badge */}
             <div className="flex justify-center gap-2 flex-wrap animate-fade-in-delay-2 cursor-pointer">
               <span className="bg-linear-to-r from-green-400 to-emerald-500 text-gray-900 font-bold px-6 py-3 rounded-full text-sm shadow-lg transform hover:scale-105 transition-transform">
                 ⭐ Conquista Desbloqueada
               </span>
             </div>
 
-            {/* Efeito coloridooo */}
+            {/* Efeito coloridoooo  */}
             <div className="absolute inset-0 pointer-events-none overflow-hidden rounded-3xl">
               {[...Array(20)].map((_, i) => (
                 <div
