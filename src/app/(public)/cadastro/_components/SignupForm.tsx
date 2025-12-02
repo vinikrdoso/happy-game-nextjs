@@ -336,7 +336,7 @@ function Step1PersonalInfo({ formData, errors, onChange }: StepProps) {
           <Input
             id="phone"
             type="tel"
-            placeholder="(00) 00000-0000"
+            placeholder="(99) 99999-9999"
             value={formData.phone}
             onChange={(e) => onChange("phone", e.target.value)}
             className={errors.phone ? "border-destructive" : ""}
