@@ -30,25 +30,14 @@ export function AchievementModal({ isOpen, onClose }: AchievementModalProps) {
     <>
       {/* Overlay */}
       <div
-        className={`
-          fixed inset-0 bg-black/80 backdrop-blur-sm z-50
-          transition-opacity duration-300
-          ${show ? "opacity-100" : "opacity-0"}
-        `}
+        className={`fixed inset-0 bg-black/80 backdrop-blur-sm z-50 transition-opacity duration-300 ${show ? "opacity-100" : "opacity-0"}`}
         onClick={handleClose}
       />
 
       {/* Modal */}
       <div className="fixed inset-0 flex items-center justify-center z-50 p-4">
         <div
-          className={`
-            relative bg-linear-to-br from-gray-900 via-gray-800 to-black
-            border-2 border-green-500
-            rounded-3xl shadow-2xl
-            max-w-md w-full
-            transform transition-all duration-300
-            ${show ? "scale-100 opacity-100" : "scale-75 opacity-0"}
-          `}
+          className={`relative bg-linear-to-br from-gray-900 via-gray-800 to-black border-2 border-green-500 rounded-3xl shadow-2xl max-w-md w-full transform transition-all duration-300 ${show ? "scale-100 opacity-100" : "scale-75 opacity-0"}`}
         >
           {/* Header */}
           <div className="border-b border-gray-700 px-6 py-4 flex items-center justify-between">

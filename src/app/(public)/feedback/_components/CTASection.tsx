@@ -10,10 +10,7 @@ export function CTASection() {
       <div className="container mx-auto px-4">
         <div className="mx-auto max-w-3xl text-center">
           {/* Title */}
-          <h3
-            className="font-heading text-3xl md:text-4xl font-bold mb-6
-              animate-fadeIn"
-          >
+          <h3 className="font-heading text-3xl md:text-4xl font-bold mb-6 animate-fadeIn">
             Siga nossa jornada nas redes sociais
           </h3>
 

@@ -37,28 +37,7 @@ function BenefitCardComponent({ card, index }: { card: BenefitCard; index: numbe
 
   return (
     <div
-      className="
-        // Layout
-        group
-        // Spacing
-        p-6
-        // Border & Background
-        rounded-2xl
-        bg-background-primary/50 dark:bg-background-primary/30
-        border border-border
-        backdrop-blur-sm
-        // Hover Effects
-        hover:border-primary/50
-        hover:bg-background-primary dark:hover:bg-background-primary/50
-        // Transitions
-        transition-all duration-300
-        // Shadow
-        hover:shadow-xl hover:shadow-primary/10
-        // Transform
-        hover:-translate-y-1
-        // Animation
-        animate-fadeIn
-      "
+      className="group p-6 rounded-2xl bg-background-primary/50 dark:bg-background-primary/30 border border-border backdrop-blur-sm hover:border-primary/50 hover:bg-background-primary dark:hover:bg-background-primary/50 transition-all duration-300 hover:shadow-xl hover:shadow-primary/10 hover:-translate-y-1 animate-fadeIn"
       style={{
         animationDelay: `${index * 0.1}s`,
         opacity: 0,
@@ -66,50 +45,14 @@ function BenefitCardComponent({ card, index }: { card: BenefitCard; index: numbe
       }}
     >
       {/* Icon */}
-      <div
-        className="
-          // Layout
-          mb-4 inline-flex
-          // Size
-          h-14 w-14
-          // Alignment
-          items-center justify-center
-          // Style
-          rounded-xl
-          bg-primary/10 dark:bg-primary/20
-          // Transitions
-          transition-all duration-300
-          // Group Hover
-          group-hover:bg-primary group-hover:scale-110
-        "
-      >
+      <div className="mb-4 inline-flex h-14 w-14 items-center justify-center rounded-xl bg-primary/10 dark:bg-primary/20 transition-all duration-300 group-hover:bg-primary group-hover:scale-110">
         {IconComponent && (
-          <IconComponent
-            className="
-              // Size
-              h-7 w-7
-              // Color
-              text-primary
-              // Group Hover
-              group-hover:text-primary-foreground
-              // Transitions
-              transition-colors duration-300
-            "
-          />
+          <IconComponent className="h-7 w-7 text-primary group-hover:text-primary-foreground transition-colors duration-300" />
         )}
       </div>
 
       {/* Title */}
-      <h3
-        className="
-          // Typography
-          font-heading text-xl font-bold
-          // Spacing
-          mb-3
-          // Color
-          text-neutral-950 dark:text-neutral-50
-        "
-      >
+      <h3 className="font-heading text-xl font-bold mb-3 text-neutral-950 dark:text-neutral-50">
         {card.title}
       </h3>
 
@@ -136,31 +79,11 @@ export function BenefitsSection({ genres }: BenefitsSectionProps) {
         <div className="mx-auto max-w-6xl">
           {/* Section Header */}
           <div className="mb-12 text-center">
-            <div
-              className="
-                // Layout
-                mb-4 inline-block
-                // Spacing
-                px-4 py-2
-                // Style
-                rounded-full
-                bg-primary/10 dark:bg-primary/20
-                // Typography
-                text-sm font-semibold uppercase tracking-wider
-                text-primary
-              "
-            >
+            <div className="mb-4 inline-block px-4 py-2 rounded-full bg-primary/10 dark:bg-primary/20 text-sm font-semibold uppercase tracking-wider text-primary">
               Benefícios Exclusivos
             </div>
 
-            <h2
-              className="
-                // Typography
-                font-heading text-3xl md:text-4xl font-bold
-                // Spacing
-                mb-4
-              "
-            >
+            <h2 className="font-heading text-3xl md:text-4xl font-bold mb-4">
               O que te aguarda na comunidade
             </h2>
 
