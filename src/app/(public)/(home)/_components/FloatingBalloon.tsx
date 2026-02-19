@@ -19,17 +19,7 @@ export function FloatingBalloon() {
         ${isVisible ? "translate-y-0 opacity-100" : "translate-y-16 opacity-0"}
       `}
     >
-      <div
-        className="
-          relative
-          bg-linear-to-br from-purple-600 via-pink-500 to-red-500
-          rounded-2xl shadow-2xl
-          p-4 max-w-xs
-          animate-float
-          hover:scale-105 transition-transform duration-300
-          cursor-default
-        "
-      >
+      <div className="relative bg-linear-to-br from-purple-600 via-pink-500 to-red-500 rounded-2xl shadow-2xl p-4 max-w-xs animate-float hover:scale-105 transition-transform duration-300 cursor-default">
         {/* Brilho animado */}
         <div className="absolute inset-0 rounded-2xl bg-linear-to-r from-transparent via-white to-transparent opacity-20 animate-shimmer" />
 
