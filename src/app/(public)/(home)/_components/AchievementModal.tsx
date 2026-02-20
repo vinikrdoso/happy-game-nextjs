@@ -12,10 +12,14 @@ export function AchievementModal({ isOpen, onClose }: AchievementModalProps) {
 
   useEffect(() => {
     if (isOpen) {
-      const timer = setTimeout(() => {
+      const showTimer = setTimeout(() => setShow(true), 10);
+      const closeTimer = setTimeout(() => {
         handleClose();
       }, 5000);
-      return () => clearTimeout(timer);
+      return () => {
+        clearTimeout(showTimer);
+        clearTimeout(closeTimer);
+      };
     }
   }, [isOpen]);
 
