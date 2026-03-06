@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { H1, Paragraph, Span } from "@/components/ui/Typography";
 import { SignupForm } from "./_components/SignupForm";
 import { ArrowLeft } from "lucide-react";
 
@@ -36,21 +37,21 @@ export default function CadastroPage() {
 
         {/* Header */}
         <header className="text-center mb-12 animate-fadeIn">
-          <h1 className="font-heading text-4xl md:text-5xl font-bold mb-4">
+          <H1 className="mb-4">
             Garanta seu lugar no{" "}
-            <span
+            <Span
               className="
                 bg-clip-text text-transparent
                 bg-linear-to-r from-primary-green-base to-primary-green-lighter-1
               "
             >
               Happy Game
-            </span>
-          </h1>
-          <p className="text-lg text-text-muted max-w-2xl mx-auto">
+            </Span>
+          </H1>
+          <Paragraph variant="text1" className="text-text-muted max-w-2xl mx-auto">
             Junte-se à lista de espera e seja um dos primeiros a explorar a nova
             comunidade gamer
-          </p>
+          </Paragraph>
         </header>
 
         {/* Form Card */}
@@ -78,7 +79,7 @@ export default function CadastroPage() {
             animationFillMode: "forwards",
           }}
         >
-          <p className="text-text-muted">
+          <Paragraph className="text-text-muted">
             Já tem uma conta?{" "}
             <Link
               href="/login"
@@ -88,7 +89,7 @@ export default function CadastroPage() {
             >
               Entre aqui
             </Link>
-          </p>
+          </Paragraph>
         </div>
       </div>
     </div>

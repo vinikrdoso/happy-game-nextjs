@@ -2,6 +2,7 @@
 
 import { Instagram } from "lucide-react";
 import { Button } from "@/components/ui/Button";
+import { H3, Paragraph } from "@/components/ui/Typography";
 import Link from "next/link";
 
 export function CTASection() {
@@ -10,13 +11,14 @@ export function CTASection() {
       <div className="container mx-auto px-4">
         <div className="mx-auto max-w-3xl text-center">
           {/* Title */}
-          <h3 className="font-heading text-3xl md:text-4xl font-bold mb-6 animate-fadeIn">
+          <H3 className="mb-6 animate-fadeIn">
             Siga nossa jornada nas redes sociais
-          </h3>
+          </H3>
 
           {/* Description */}
-          <p
-            className="text-lg text-text-muted mb-8 animate-fadeIn"
+          <Paragraph
+            variant="text1"
+            className="text-text-muted mb-8 animate-fadeIn"
             style={{
               animationDelay: "0.1s",
               opacity: 0,
@@ -26,7 +28,7 @@ export function CTASection() {
             Fique por dentro de todas as novidades, lançamentos e eventos
             exclusivos da nossa comunidade gamer. Acompanhe nosso conteúdo e
             faça parte dessa história épica!
-          </p>
+          </Paragraph>
 
           {/* CTA Button */}
           <div
@@ -63,10 +65,10 @@ export function CTASection() {
               animationFillMode: "forwards",
             }}
           >
-            <p className="text-text-muted">
+            <Paragraph className="text-text-muted">
               📧 <strong>Fique atento!</strong> Em breve você receberá um e-mail
               com mais informações sobre como participar da nossa comunidade.
-            </p>
+            </Paragraph>
           </div>
         </div>
       </div>

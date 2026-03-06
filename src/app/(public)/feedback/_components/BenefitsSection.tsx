@@ -11,6 +11,7 @@ import {
   Swords,
   Gamepad2,
 } from "lucide-react";
+import { H2, H3, Paragraph } from "@/components/ui/Typography";
 import type { BenefitCard } from "../types";
 import type { Genre } from "../../cadastro/types";
 import { fixedCards, cardsByGenre } from "../data/benefitCards";
@@ -52,12 +53,12 @@ function BenefitCardComponent({ card, index }: { card: BenefitCard; index: numbe
       </div>
 
       {/* Title */}
-      <h3 className="font-heading text-xl font-bold mb-3 text-neutral-950 dark:text-neutral-50">
+      <H3 className="mb-3 text-neutral-950 dark:text-neutral-50">
         {card.title}
-      </h3>
+      </H3>
 
       {/* Description */}
-      <p className="text-text-muted leading-relaxed">{card.description}</p>
+      <Paragraph className="text-text-muted leading-relaxed">{card.description}</Paragraph>
     </div>
   );
 }
@@ -83,14 +84,14 @@ export function BenefitsSection({ genres }: BenefitsSectionProps) {
               Benefícios Exclusivos
             </div>
 
-            <h2 className="font-heading text-3xl md:text-4xl font-bold mb-4">
+            <H2 className="mb-4">
               O que te aguarda na comunidade
-            </h2>
+            </H2>
 
-            <p className="text-lg text-text-muted max-w-2xl mx-auto">
+            <Paragraph variant="text1" className="text-text-muted max-w-2xl mx-auto">
               Seja um dos pioneiros a construir a comunidade que vai preservar o passado,
               viver o presente e criar o futuro dos videogames.
-            </p>
+            </Paragraph>
           </div>
 
           {/* Cards Grid */}

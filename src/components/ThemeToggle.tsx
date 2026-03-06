@@ -77,8 +77,7 @@ export function ThemeToggle() {
 
   return (
     <Button
-      variant="secondary"
-      className="h-9 w-9 min-h-9 min-w-9 p-2 border border-border-primary"
+      size="large"
       onClick={handleToggle}
       aria-label={`Tema: ${theme}. Clique para alternar.`}
       title={`Tema: ${theme}`}

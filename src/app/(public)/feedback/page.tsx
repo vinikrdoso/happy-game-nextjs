@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import { HeroSection } from "./_components/HeroSection";
 import { BenefitsSection } from "./_components/BenefitsSection";
 import { CTASection } from "./_components/CTASection";
+import { Paragraph } from "@/components/ui/Typography";
 import type { UserFeedbackData } from "./types";
 import { Loader2 } from "lucide-react";
 
@@ -40,7 +41,7 @@ export default function FeedbackPage() {
       <div className="min-h-screen flex items-center justify-center bg-background">
         <div className="text-center">
           <Loader2 className="h-12 w-12 text-primary animate-spin mx-auto mb-4" />
-          <p className="text-text-muted">Carregando...</p>
+          <Paragraph className="text-text-muted">Carregando...</Paragraph>
         </div>
       </div>
     );

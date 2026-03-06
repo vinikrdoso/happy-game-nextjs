@@ -22,6 +22,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/Select";
+import { H2, Paragraph } from "@/components/ui/Typography";
 import {
   ArrowLeft,
   ArrowRight,
@@ -230,10 +231,10 @@ export function SignupForm() {
       </div>
 
       <div className="text-center mb-8">
-        <h2 className="font-heading text-3xl font-bold mb-2">
+        <H2 className="mb-2">
           {getStepTitle()}
-        </h2>
-        <p className="text-text-muted">Etapa {currentStep} de 4</p>
+        </H2>
+        <Paragraph className="text-text-muted">Etapa {currentStep} de 4</Paragraph>
       </div>
 
       <form onSubmit={handleSubmit} className="space-y-6">
@@ -295,7 +296,7 @@ function Step1PersonalInfo({ formData, errors, onChange }: StepProps) {
             className={errors.fullName ? "border-destructive" : ""}
           />
           {errors.fullName && (
-            <p className="text-sm text-destructive">{errors.fullName}</p>
+            <Paragraph variant="text3" className="text-destructive">{errors.fullName}</Paragraph>
           )}
         </div>
 
@@ -310,7 +311,7 @@ function Step1PersonalInfo({ formData, errors, onChange }: StepProps) {
             className={errors.nickname ? "border-destructive" : ""}
           />
           {errors.nickname && (
-            <p className="text-sm text-destructive">{errors.nickname}</p>
+            <Paragraph variant="text3" className="text-destructive">{errors.nickname}</Paragraph>
           )}
         </div>
       </div>
@@ -327,7 +328,7 @@ function Step1PersonalInfo({ formData, errors, onChange }: StepProps) {
             className={errors.email ? "border-destructive" : ""}
           />
           {errors.email && (
-            <p className="text-sm text-destructive">{errors.email}</p>
+            <Paragraph variant="text3" className="text-destructive">{errors.email}</Paragraph>
           )}
         </div>
 
@@ -342,7 +343,7 @@ function Step1PersonalInfo({ formData, errors, onChange }: StepProps) {
             className={errors.phone ? "border-destructive" : ""}
           />
           {errors.phone && (
-            <p className="text-sm text-destructive">{errors.phone}</p>
+            <Paragraph variant="text3" className="text-destructive">{errors.phone}</Paragraph>
           )}
         </div>
       </div>
@@ -364,12 +365,12 @@ function Step2Password({ formData, errors, onChange }: StepProps) {
           className={errors.password ? "border-destructive" : ""}
         />
         {errors.password && (
-          <p className="text-sm text-destructive">{errors.password}</p>
+          <Paragraph variant="text3" className="text-destructive">{errors.password}</Paragraph>
         )}
-        <p className="text-xs text-text-muted">
+        <Paragraph variant="text4" className="text-text-muted">
           Mínimo 6 caracteres com pelo menos uma maiúscula, uma minúscula e um
           número
-        </p>
+        </Paragraph>
       </div>
 
       <div className="space-y-2">
@@ -383,7 +384,7 @@ function Step2Password({ formData, errors, onChange }: StepProps) {
           className={errors.confirmPassword ? "border-destructive" : ""}
         />
         {errors.confirmPassword && (
-          <p className="text-sm text-destructive">{errors.confirmPassword}</p>
+          <Paragraph variant="text3" className="text-destructive">{errors.confirmPassword}</Paragraph>
         )}
       </div>
     </div>
@@ -430,7 +431,7 @@ function Step3Preferences({
           </SelectContent>
         </Select>
         {errors.platform && (
-          <p className="text-sm text-destructive">{errors.platform}</p>
+          <Paragraph variant="text3" className="text-destructive">{errors.platform}</Paragraph>
         )}
       </div>
 
@@ -458,7 +459,7 @@ function Step3Preferences({
           ))}
         </div>
         {errors.genres && (
-          <p className="text-sm text-destructive">{errors.genres}</p>
+          <Paragraph variant="text3" className="text-destructive">{errors.genres}</Paragraph>
         )}
       </div>
     </div>
@@ -502,7 +503,7 @@ function Step4Finalization({ formData, errors, onChange }: StepProps) {
         </Label>
       </div>
       {errors.acceptTerms && (
-        <p className="text-sm text-destructive ml-6">{errors.acceptTerms}</p>
+        <Paragraph variant="text3" className="text-destructive ml-6">{errors.acceptTerms}</Paragraph>
       )}
     </div>
   );

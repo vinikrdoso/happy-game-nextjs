@@ -10,6 +10,7 @@ import { Button } from "@/components/ui/Button";
 import { Avatar } from "@/components/ui/Avatar";
 import { NavigationButton } from "@/components/ui/NavigationButton";
 import { ThemeToggle } from "@/components/ThemeToggle";
+import { Span } from "@/components/ui/Typography";
 import { cn } from "@/lib/utils";
 
 const ROUTES = [
@@ -30,7 +31,11 @@ export function PrivateNavbar({ session }: PrivateNavbarProps) {
       logo={
         <Link href="/feed" className="flex items-center">
           <Logo variant="black" size="lg" className="dark:hidden h-14 w-auto" />
-          <Logo variant="white" size="lg" className="hidden dark:block h-14 w-auto" />
+          <Logo
+            variant="white"
+            size="lg"
+            className="hidden dark:block h-14 w-auto"
+          />
         </Link>
       }
       navItems={
@@ -46,7 +51,7 @@ export function PrivateNavbar({ session }: PrivateNavbarProps) {
                 className={cn(
                   "rounded-md transition-colors",
                   isActive &&
-                    "bg-brand-purple-100 text-brand-purple-800 [&_span:first-child]:bg-brand-purple-100 [&_span:first-child]:text-brand-purple-800"
+                    "bg-brand-purple-100 text-brand-purple-800 [&_span:first-child]:bg-brand-purple-100 [&_span:first-child]:text-brand-purple-800",
                 )}
               />
             );
@@ -63,9 +68,9 @@ export function PrivateNavbar({ session }: PrivateNavbarProps) {
                 size={24}
                 className="h-6 w-6"
               />
-              <span className="truncate max-w-[120px]">
+              <Span className="truncate max-w-[120px]">
                 {user?.name ?? "Perfil"}
-              </span>
+              </Span>
             </Link>
           </Button>
           <ThemeToggle />

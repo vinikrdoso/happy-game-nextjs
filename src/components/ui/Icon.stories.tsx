@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 import { Icon } from "./Icon";
+import { Span } from "./Typography";
 
 const meta = {
   title: "UI/Icon",
@@ -48,7 +49,7 @@ export const AllIcons: Story = {
         (name) => (
           <div key={name} className="flex flex-col items-center gap-1">
             <Icon name={name} size={24} />
-            <span className="text-xs text-text-secondary">{name}</span>
+            <Span variant="text4" className="text-text-secondary">{name}</Span>
           </div>
         )
       )}

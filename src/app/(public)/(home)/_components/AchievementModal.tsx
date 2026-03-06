@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { H2, H3, Paragraph, Span } from "@/components/ui/Typography";
 
 interface AchievementModalProps {
   isOpen: boolean;
@@ -45,9 +46,9 @@ export function AchievementModal({ isOpen, onClose }: AchievementModalProps) {
         >
           {/* Header */}
           <div className="border-b border-gray-700 px-6 py-4 flex items-center justify-between">
-            <h2 className="text-2xl font-bold text-green-400 flex items-center gap-2">
+            <H2 className="text-green-400 flex items-center gap-2">
               CÓDIGO SURPRESA ATIVADO!
-            </h2>
+            </H2>
             <button
               onClick={handleClose}
               className="text-gray-400 hover:text-white transition-colors"
@@ -76,18 +77,18 @@ export function AchievementModal({ isOpen, onClose }: AchievementModalProps) {
               <div className="relative text-8xl animate-bounce-slow">🏆</div>
             </div>
 
-            <h3 className="text-3xl font-bold text-white mb-4 animate-fade-in">
+            <H3 className="text-white mb-4 animate-fade-in">
               Parabéns, verdadeiro gamer!
-            </h3>
+            </H3>
 
-            <p className="text-gray-300 text-lg mb-6 animate-fade-in-delay">
+            <Paragraph variant="text1" className="text-gray-300 mb-6 animate-fade-in-delay">
               Você desbloqueou o easter egg secreto!
-            </p>
+            </Paragraph>
 
             <div className="flex justify-center gap-2 flex-wrap animate-fade-in-delay-2 cursor-pointer">
-              <span className="bg-linear-to-r from-green-400 to-emerald-500 text-gray-900 font-bold px-6 py-3 rounded-full text-sm shadow-lg transform hover:scale-105 transition-transform">
+              <Span variant="text3" weight="bold" className="bg-linear-to-r from-green-400 to-emerald-500 text-gray-900 px-6 py-3 rounded-full shadow-lg transform hover:scale-105 transition-transform">
                 ⭐ Conquista Desbloqueada
-              </span>
+              </Span>
             </div>
 
             {/* Efeito coloridoooo  */}

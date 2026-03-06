@@ -3,6 +3,7 @@ import { authOptions } from "@/lib/auth";
 import { redirect } from "next/navigation";
 import Image from "next/image";
 import { Mail } from "lucide-react";
+import { H1, H2, H3 } from "@/components/ui/Typography";
 import { LogoutButton } from "./_components/LogoutButton";
 
 export default async function Perfil() {
@@ -17,9 +18,9 @@ export default async function Perfil() {
   return (
     <div className="min-h-screen bg-color-background text-neutral-950 dark:text-neutral-50 p-4 md:p-8">
       <div className="max-w-4xl mx-auto">
-        <h1 className="font-heading text-4xl md:text-5xl font-bold text-neutral-950 dark:text-white mb-8">
+        <H1 className="text-neutral-950 dark:text-white mb-8">
           Meu Perfil
-        </h1>
+        </H1>
 
         <div className="bg-background-primary dark:bg-neutral-900 rounded-lg border border-border p-6 md:p-8 space-y-6">
           <div className="flex flex-col md:flex-row items-center md:items-start gap-6">
@@ -37,9 +38,9 @@ export default async function Perfil() {
 
             <div className="flex-1 space-y-4 text-center md:text-left">
               <div>
-                <h2 className="font-heading text-2xl md:text-3xl font-bold text-neutral-950 dark:text-white mb-2">
+                <H2 className="text-neutral-950 dark:text-white mb-2">
                   {user.name || "Usuário"}
-                </h2>
+                </H2>
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
@@ -49,9 +50,9 @@ export default async function Perfil() {
           </div>
 
           <div className="border-t border-border pt-6">
-            <h3 className="font-heading text-xl font-bold text-neutral-950 dark:text-white mb-4">
+            <H3 className="text-neutral-950 dark:text-white mb-4">
               Informações da Conta
-            </h3>
+            </H3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div className="space-y-2">
                 <label className="text-sm text-neutral-600 dark:text-neutral-400">

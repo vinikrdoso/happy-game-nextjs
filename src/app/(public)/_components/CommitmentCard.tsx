@@ -1,4 +1,5 @@
 import { Shield, Eye, Users, type LucideIcon } from "lucide-react";
+import { H3, Paragraph, Span } from "@/components/ui/Typography";
 
 export interface Commitment {
   id: string;
@@ -29,21 +30,21 @@ export function CommitmentCard({ commitment }: CommitmentCardProps) {
         </div>
       </div>
 
-      <h3 className="text-xl font-heading font-bold text-center text-neutral-950 dark:text-neutral-50">
+      <H3 className="text-center text-neutral-950 dark:text-neutral-50">
         {commitment.title}
-      </h3>
+      </H3>
 
-      <p className="text-sm text-color-text-muted text-center">
+      <Paragraph variant="text3" className="text-color-text-muted text-center">
         {commitment.description}
-      </p>
+      </Paragraph>
 
       <ul className="space-y-2">
         {commitment.points.map((point, index) => (
           <li key={index}>
             {index > 0 && <div className="border-t border-border mb-2 mt-2" />}
-            <span className="text-sm text-neutral-950 dark:text-neutral-50">
+            <Span variant="text3" className="text-neutral-950 dark:text-neutral-50">
               {point}
-            </span>
+            </Span>
           </li>
         ))}
       </ul>

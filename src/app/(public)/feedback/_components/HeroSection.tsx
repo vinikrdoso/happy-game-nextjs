@@ -1,6 +1,7 @@
 "use client";
 
 import { Check } from "lucide-react";
+import { H1, Paragraph, Span } from "@/components/ui/Typography";
 import type { Platform } from "../../cadastro/types";
 
 interface HeroSectionProps {
@@ -53,20 +54,21 @@ export function HeroSection({ fullName, platform }: HeroSectionProps) {
           </div>
 
           {/* Title */}
-          <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold mb-6 animate-fadeIn">
+          <H1 className="mb-6 animate-fadeIn">
             Bem-vindo(a),{" "}
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary-green-base to-primary-green-lighter-1">
+            <Span className="bg-clip-text text-transparent bg-gradient-to-r from-primary-green-base to-primary-green-lighter-1">
               {fullName}!
-            </span>
-          </h1>
+            </Span>
+          </H1>
 
           {/* Description */}
-          <p
-            className="text-lg md:text-xl text-text-muted mb-8 animate-fadeIn"
+          <Paragraph
+            variant="text1"
+            className="text-text-muted mb-8 animate-fadeIn"
             style={{ animationDelay: "0.2s", opacity: 0, animationFillMode: "forwards" }}
           >
             {description}
-          </p>
+          </Paragraph>
 
           {/* Success Badge */}
           <div
@@ -74,7 +76,7 @@ export function HeroSection({ fullName, platform }: HeroSectionProps) {
             style={{ animationDelay: "0.4s", opacity: 0, animationFillMode: "forwards" }}
           >
             <Check className="h-5 w-5 text-primary" />
-            <span className="font-semibold text-primary">Cadastro realizado com sucesso!</span>
+            <Span weight="bold" className="text-primary">Cadastro realizado com sucesso!</Span>
           </div>
         </div>
       </div>

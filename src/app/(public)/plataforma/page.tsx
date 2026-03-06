@@ -23,6 +23,7 @@ import {
   Leaf,
   type LucideIcon,
 } from "lucide-react";
+import { H1, H2, H3, Paragraph, Span } from "@/components/ui/Typography";
 
 interface PlatformResource {
   id: string;
@@ -104,13 +105,13 @@ export default async function Plataforma() {
       <section className="bg-background-secondary">
         <div className="p-8 max-w-[1320px] mx-auto">
           <div className="text-center mb-8">
-            <h2 className="font-heading text-4xl font-bold mb-4">
+            <H2 className="mb-4">
               Recursos da Plataforma
-            </h2>
-            <p className="text-color-text-muted max-w-2xl mx-auto font-heading p-3  font-semibold text-4xl">
+            </H2>
+            <Paragraph variant="text1" weight="bold" className="text-color-text-muted max-w-2xl mx-auto p-3">
               Descubra tudo que nossa plataforma oferece para gamers e
               desenvolvedores em uma experiência completa e inovadora.
-            </p>
+            </Paragraph>
           </div>
 
           <div className="rounded-lg overflow-hidden border border-border">
@@ -139,9 +140,9 @@ export default async function Plataforma() {
                       <TableCell>
                         <div className="flex items-center gap-2">
                           <Icon className="h-5 w-5 text-primary-green-base" />
-                          <span className="font-medium">
+                          <Span weight="bold">
                             {resource.category}
-                          </span>
+                          </Span>
                         </div>
                       </TableCell>
                       <TableCell className="font-medium">
@@ -162,13 +163,13 @@ export default async function Plataforma() {
       <section className="bg-background">
         <div className="p-8 max-w-[1320px] mx-auto">
           <div className="text-center mb-12">
-            <h1 className="font-heading text-4xl font-bold mb-4 text-neutral-950 dark:text-neutral-50">
+            <H1 className="mb-4 text-neutral-950 dark:text-neutral-50">
               Nosso Compromisso com a Comunidade
-            </h1>
-            <p className="text-color-text-muted max-w-2xl mx-auto">
+            </H1>
+            <Paragraph className="text-color-text-muted max-w-2xl mx-auto">
               Construímos uma plataforma sustentável, transparente e inclusiva
               para todos os gamers.
-            </p>
+            </Paragraph>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -188,14 +189,14 @@ export default async function Plataforma() {
                 <Leaf className="h-12 w-12 text-primary-green-base" />
               </div>
               <div className="flex-1">
-                <h3 className="font-heading text-xl md:text-2xl font-bold mb-2 text-neutral-50">
+                <H3 className="mb-2 text-neutral-50">
                   Sustentabilidade Digital:
-                </h3>
-                <p className="text-neutral-50 text-sm md:text-base">
+                </H3>
+                <Paragraph variant="text3" className="text-neutral-50">
                   Comprometidos com práticas de desenvolvimento sustentável,
                   otimização de recursos e redução de impacto ambiental em nossa
                   infraestrutura.
-                </p>
+                </Paragraph>
               </div>
             </div>
           </div>
@@ -205,13 +206,13 @@ export default async function Plataforma() {
       <section className="bg-background-primary">
         <div className="p-8 max-w-[1320px] mx-auto">
           <div className="text-center mb-8">
-            <h2 className="font-heading text-4xl font-bold mb-4">
+            <H2 className="mb-4">
               Conheça Nossa Equipe
-            </h2>
-            <p className="text-color-text-muted max-w-2xl mx-auto">
+            </H2>
+            <Paragraph className="text-color-text-muted max-w-2xl mx-auto">
               Conheça nossa equipe de desenvolvedores e designers que trabalham
               para criar a melhor plataforma para gamers.
-            </p>
+            </Paragraph>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {members.map((member) => (

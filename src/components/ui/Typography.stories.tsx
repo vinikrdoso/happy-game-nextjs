@@ -48,14 +48,14 @@ export const AllTextStyles: StoryObj = {
   render: () => (
     <div className="space-y-6 max-w-xl">
       <div>
-        <Span className="text-text-tertiary text-xs">Display / Headings</Span>
+        <Span variant="text4" className="text-text-tertiary">Display / Headings</Span>
         <H1 className="mt-1">Display 1</H1>
         <H2>Heading 2</H2>
         <H3>Heading 3</H3>
         <H4>Heading 4</H4>
       </div>
       <div>
-        <Span className="text-text-tertiary text-xs">Body text</Span>
+        <Span variant="text4" className="text-text-tertiary">Body text</Span>
         <Paragraph className="mt-1">
           Paragraph (text2) – corpo de texto padrão para leitura.
         </Paragraph>

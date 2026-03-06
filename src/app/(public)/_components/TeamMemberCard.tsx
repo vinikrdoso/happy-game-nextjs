@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Badge } from "@/components/ui/Badge";
+import { H3, Paragraph } from "@/components/ui/Typography";
 
 export interface TeamMember {
   id: string;
@@ -26,17 +27,17 @@ export function TeamMemberCard({ member }: TeamMemberCardProps) {
       </div>
 
       <div className="p-4 bg-background-secondary space-y-3 h-full  ">
-        <h3 className="text-lg font-heading font-bold text-neutral-950 dark:text-neutral-50 text-center">
+        <H3 className="text-neutral-950 dark:text-neutral-50 text-center">
           {member.name}
-        </h3>
+        </H3>
 
         <div className="flex justify-center">
           <Badge variant="default">{member.role}</Badge>
         </div>
 
-        <p className="text-sm text-color-text-muted text-center font-body">
+        <Paragraph variant="text3" className="text-color-text-muted text-center">
           {member.bio}
-        </p>
+        </Paragraph>
       </div>
     </div>
   );

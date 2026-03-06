@@ -2,6 +2,7 @@
 
 import React from "react";
 import { type LucideIcon } from "lucide-react";
+import { H3, Paragraph, Span } from "@/components/ui/Typography";
 
 export interface TimelineItemData {
   period: string;
@@ -40,7 +41,7 @@ export function TimelineItem({ item, isLast = false }: TimelineItemProps) {
           </strong>
         );
       }
-      return <span key={index}>{part}</span>;
+      return <Span key={index}>{part}</Span>;
     });
   };
 
@@ -60,12 +61,12 @@ export function TimelineItem({ item, isLast = false }: TimelineItemProps) {
         <div className="text-primary-green-base text-sm font-medium mb-2">
           {period}
         </div>
-        <h3 className="font-heading text-3xl md:text-4xl font-bold text-neutral-950 dark:text-white mb-4">
+        <H3 className="text-neutral-950 dark:text-white mb-4">
           {title}
-        </h3>
-        <p className="text-neutral-600 dark:text-neutral-300 text-base leading-relaxed">
+        </H3>
+        <Paragraph className="text-neutral-600 dark:text-neutral-300 leading-relaxed">
           {formatDescription(description, games)}
-        </p>
+        </Paragraph>
       </div>
     </div>
   );

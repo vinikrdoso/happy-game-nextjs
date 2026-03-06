@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { Paragraph, Span } from "@/components/ui/Typography";
 
 export function FloatingBalloon() {
   const [isVisible, setIsVisible] = useState(false);
@@ -25,43 +26,43 @@ export function FloatingBalloon() {
 
         {/* Conteúdo */}
         <div className="relative z-10 text-center">
-          <p className="text-white font-bold text-sm leading-relaxed drop-shadow-lg">
+          <Paragraph variant="text3" weight="bold" className="text-white leading-relaxed drop-shadow-lg">
             Pressione{" "}
-            <span className="inline-block animate-bounce mx-1">↑</span>
-            <span
+            <Span className="inline-block animate-bounce mx-1">↑</Span>
+            <Span
               className="inline-block animate-bounce mx-1"
               style={{ animationDelay: "0.1s" }}
             >
               ↑
-            </span>
-            <span
+            </Span>
+            <Span
               className="inline-block animate-bounce mx-1"
               style={{ animationDelay: "0.2s" }}
             >
               ↓
-            </span>
-            <span
+            </Span>
+            <Span
               className="inline-block animate-bounce mx-1"
               style={{ animationDelay: "0.3s" }}
             >
               ↓
-            </span>
-            <span
+            </Span>
+            <Span
               className="inline-block animate-bounce mx-1"
               style={{ animationDelay: "0.4s" }}
             >
               ←
-            </span>
-            <span
+            </Span>
+            <Span
               className="inline-block animate-bounce mx-1"
               style={{ animationDelay: "0.5s" }}
             >
               →
-            </span>
+            </Span>
             <br />
-            <span className="text-yellow-300 text-lg">🎮</span> e descubra uma
+            <Span variant="text1" className="text-yellow-300">🎮</Span> e descubra uma
             surpresa!
-          </p>
+          </Paragraph>
         </div>
 
         <div className="absolute bottom-0 right-8 transform translate-y-full">

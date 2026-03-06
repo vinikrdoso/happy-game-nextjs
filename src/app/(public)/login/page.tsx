@@ -5,6 +5,7 @@ import { signIn } from "next-auth/react";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { Button } from "@/components/ui/Button";
+import { H1, Paragraph } from "@/components/ui/Typography";
 import { Mail } from "lucide-react";
 
 function LoginForm() {
@@ -15,12 +16,12 @@ function LoginForm() {
     <div className="min-h-screen bg-color-background text-neutral-950 dark:text-neutral-50 flex items-center justify-center p-4">
       <div className="w-full max-w-md space-y-8">
         <div className="text-center space-y-2">
-          <h1 className="font-heading text-4xl md:text-5xl font-bold text-neutral-950 dark:text-white">
+          <H1 className="text-neutral-950 dark:text-white">
             Bem-vindo de volta!
-          </h1>
-          <p className="text-neutral-600 dark:text-neutral-300 text-base">
+          </H1>
+          <Paragraph className="text-neutral-600 dark:text-neutral-300">
             Entre na sua conta e continue explorando a comunidade gamer.
-          </p>
+          </Paragraph>
         </div>
 
         <div className="space-y-4">
@@ -42,7 +43,7 @@ export default function Login() {
     <Suspense
       fallback={
         <div className="min-h-screen bg-color-background text-neutral-950 dark:text-neutral-50 flex items-center justify-center">
-          <p>Carregando...</p>
+          <Paragraph>Carregando...</Paragraph>
         </div>
       }
     >

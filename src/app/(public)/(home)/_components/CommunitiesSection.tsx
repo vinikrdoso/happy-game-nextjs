@@ -8,6 +8,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/Card";
+import { H2, Paragraph, Span } from "@/components/ui/Typography";
 
 const communities = [
   {
@@ -53,13 +54,13 @@ export function CommunitiesSection() {
       <div className="container mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-16 max-w-3xl mx-auto">
-          <h2 className="text-3xl lg:text-5xl font-heading font-bold mb-4">
+          <H2 className="mb-4">
             Descubra sua comunidade gamer
-          </h2>
-          <p className="text-lg dark:text-neutral-400 text-neutral-600">
+          </H2>
+          <Paragraph variant="text1" className="dark:text-neutral-400 text-neutral-600">
             Nostálgico dos clássicos? Competitivo nas ranked? Ou só curte jogar?
             Aqui todo gamer tem seu espaço para brilhar e se conectar.
-          </p>
+          </Paragraph>
         </div>
 
         {/* Cards Grid */}
@@ -94,9 +95,9 @@ export function CommunitiesSection() {
                   className="text-primary-green-base hover:text-primary-green-darker-1 transition-colors font-semibold group"
                 >
                   {community.linkText}{" "}
-                  <span className="inline-block group-hover:translate-x-1 transition-transform">
+                  <Span className="inline-block group-hover:translate-x-1 transition-transform">
                     →
-                  </span>
+                  </Span>
                 </Link>
               </CardFooter>
             </Card>

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Rocket } from "lucide-react";
 import { Button } from "@/components/ui/Button";
+import { H1, Paragraph, Span } from "@/components/ui/Typography";
 import Image from "next/image";
 
 export function HeroSection() {
@@ -10,15 +11,15 @@ export function HeroSection() {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Text Content */}
           <div className="order-2 lg:order-1 space-y-6 animate-fadeIn">
-            <h1 className="text-4xl lg:text-5xl font-heading font-bold leading-tight">
+            <H1 className="leading-tight">
               Descubra a primeira comunidade feita para{" "}
-              <span className="dark:text-primary-green-base">gamers</span>
-            </h1>
-            <p className="text-lg dark:text-neutral-400 text-neutral-600">
+              <Span className="dark:text-primary-green-base">gamers</Span>
+            </H1>
+            <Paragraph variant="text1" className="dark:text-neutral-400 text-neutral-600">
               Conecte-se com outros jogadores, compartilhe suas conquistas,
               reviva os melhores momentos e descubra novas aventuras em uma
               comunidade feita para quem ama gamers.
-            </p>
+            </Paragraph>
             <Link href="/login">
               <Button size="large" className="px-8">
                 <Rocket className="h-5 w-5" />

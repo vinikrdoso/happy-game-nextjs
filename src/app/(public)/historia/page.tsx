@@ -8,6 +8,7 @@ import {
   CarouselContent,
   CarouselItem,
 } from "@/components/ui/Carousel";
+import { H1, H2, Paragraph, Span } from "@/components/ui/Typography";
 import { Rocket, Gamepad2, Box, Users, Headphones } from "lucide-react";
 import Autoplay from "embla-carousel-autoplay";
 import {
@@ -114,19 +115,19 @@ export default function Historia() {
 
         <div className="absolute inset-0 z-10 flex flex-col items-center justify-center px-4 sm:px-8 py-16 pointer-events-none">
           <div className="max-w-4xl mx-auto text-center space-y-6 pointer-events-auto">
-            <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
+            <H1 className="text-white leading-tight">
               A evolução dos games ao longo das{" "}
-              <span className="relative inline-block">
+              <Span className="relative inline-block">
                 décadas
-                <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-primary-green-base" />
-              </span>
-            </h1>
+                <Span className="absolute bottom-0 left-0 right-0 h-0.5 bg-primary-green-base" />
+              </Span>
+            </H1>
 
-            <p className="text-neutral-200 text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
+            <Paragraph variant="text1" className="text-neutral-200 max-w-2xl mx-auto leading-relaxed">
               Dos primeiros fliperamas até os mundos imersivos da atualidade,
               descubra como os jogos moldaram gerações e continuam transformando
               a forma de jogar e se conectar.
-            </p>
+            </Paragraph>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8">
               <Button
@@ -156,21 +157,21 @@ export default function Historia() {
 
       <section className="relative bg-color-background py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="font-heading text-xl md:text-2xl font-bold text-primary-green-base text-center mb-16">
+          <H2 className="text-primary-green-base text-center mb-16">
             UMA VIAGEM PELA HISTÓRIA
-          </h2>
+          </H2>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
             <div className="lg:sticky lg:top-24 h-fit">
               <div className="space-y-6">
-                <p className="font-heading text-2xl md:text-3xl lg:text-4xl font-bold text-neutral-950 dark:text-white leading-tight">
+                <H2 className="text-neutral-950 dark:text-white leading-tight">
                   O presente está repleto de jogos incríveis, mas nem sempre foi
                   assim.
-                </p>
-                <p className="text-neutral-600 dark:text-neutral-300 text-lg leading-relaxed">
+                </H2>
+                <Paragraph variant="text1" className="text-neutral-600 dark:text-neutral-300 leading-relaxed">
                   Cada década trouxe inovações que revolucionaram a indústria e
                   definiram como jogamos hoje.
-                </p>
+                </Paragraph>
               </div>
             </div>
 
@@ -189,16 +190,16 @@ export default function Historia() {
 
       <section className="flex flex-col items-center justify-center min-h-[calc(100vh-72px-330px)] px-8 py-16 bg-color-background">
         <div className="max-w-4xl mx-auto text-center space-y-6">
-          <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-950 dark:text-white">
+          <H1 className="text-neutral-950 dark:text-white">
             Pronto para fazer parte desta história?
-          </h1>
+          </H1>
 
-          <div className="space-y-2 text-neutral-600 dark:text-neutral-300 text-base md:text-lg max-w-2xl mx-auto">
-            <p>A história dos games continua sendo escrita a cada dia.</p>
-            <p>
+          <div className="space-y-2 text-neutral-600 dark:text-neutral-300 max-w-2xl mx-auto">
+            <Paragraph variant="text1">A história dos games continua sendo escrita a cada dia.</Paragraph>
+            <Paragraph variant="text1">
               E aqui, você é protagonista dela! Junte-se à nossa comunidade e
               descubra o que o futuro dos jogos reserva.
-            </p>
+            </Paragraph>
           </div>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8">

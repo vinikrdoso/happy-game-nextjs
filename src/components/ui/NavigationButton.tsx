@@ -5,6 +5,7 @@ import Link from "next/link";
 
 import { cn } from "@/lib/utils";
 import { Icon, type IconName } from "@/components/ui/Icon";
+import { Span } from "@/components/ui/Typography";
 
 const buttonWrapperClass =
   "inline-flex flex-col items-center justify-center gap-1 rounded cursor-pointer outline-none transition-colors focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2";
@@ -33,7 +34,7 @@ const NavigationButton = React.forwardRef<
       <span className={iconBoxClass} aria-hidden>
         <Icon name={icon} size={20} />
       </span>
-      <span className="text-xs font-normal text-text-primary">{name}</span>
+      <Span variant="text4" className="text-text-primary">{name}</Span>
     </Link>
   );
 });
