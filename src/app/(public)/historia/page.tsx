@@ -123,7 +123,10 @@ export default function Historia() {
               </Span>
             </H1>
 
-            <Paragraph variant="text1" className="text-neutral-200 max-w-2xl mx-auto leading-relaxed">
+            <Paragraph
+              variant="text1"
+              className="text-neutral-200 max-w-2xl mx-auto leading-relaxed"
+            >
               Dos primeiros fliperamas até os mundos imersivos da atualidade,
               descubra como os jogos moldaram gerações e continuam transformando
               a forma de jogar e se conectar.
@@ -142,7 +145,7 @@ export default function Historia() {
 
               <Button
                 asChild
-                variant="outline"
+                variant="secondary"
                 className="border-primary-green-base bg-transparent hover:bg-primary-green-base/10 text-white font-medium px-8 py-6 text-base rounded-md w-full sm:w-auto"
               >
                 <Link href="/plataforma" className="flex items-center gap-2">
@@ -168,7 +171,10 @@ export default function Historia() {
                   O presente está repleto de jogos incríveis, mas nem sempre foi
                   assim.
                 </H2>
-                <Paragraph variant="text1" className="text-neutral-600 dark:text-neutral-300 leading-relaxed">
+                <Paragraph
+                  variant="text1"
+                  className="text-neutral-600 dark:text-neutral-300 leading-relaxed"
+                >
                   Cada década trouxe inovações que revolucionaram a indústria e
                   definiram como jogamos hoje.
                 </Paragraph>
@@ -195,7 +201,9 @@ export default function Historia() {
           </H1>
 
           <div className="space-y-2 text-neutral-600 dark:text-neutral-300 max-w-2xl mx-auto">
-            <Paragraph variant="text1">A história dos games continua sendo escrita a cada dia.</Paragraph>
+            <Paragraph variant="text1">
+              A história dos games continua sendo escrita a cada dia.
+            </Paragraph>
             <Paragraph variant="text1">
               E aqui, você é protagonista dela! Junte-se à nossa comunidade e
               descubra o que o futuro dos jogos reserva.
@@ -212,7 +220,7 @@ export default function Historia() {
 
             <Button
               asChild
-              variant="outline"
+              variant="secondary"
               className="border-primary-green-base bg-transparent hover:bg-primary-green-base/10 text-neutral-950 dark:text-white font-medium px-8 py-6 text-base rounded-md w-full sm:w-auto"
             >
               <Link href="/plataforma">Explorar Plataforma</Link>

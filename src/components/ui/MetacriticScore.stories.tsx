@@ -33,6 +33,7 @@ export const Bad: Story = {
 };
 
 export const AutoVariant: Story = {
+  args: { score: 92 },
   render: () => (
     <div className="flex gap-4">
       <MetacriticScore score={92} />

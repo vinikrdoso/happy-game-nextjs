@@ -33,6 +33,7 @@ export const Default: Story = {
 };
 
 export const Sizes: Story = {
+  args: { name: "Rocket" },
   render: () => (
     <div className="flex items-center gap-6">
       <Icon name="Rocket" size={16} />
@@ -43,6 +44,7 @@ export const Sizes: Story = {
 };
 
 export const AllIcons: Story = {
+  args: { name: "Home" },
   render: () => (
     <div className="flex flex-wrap gap-4">
       {(["Home", "Rocket", "Gamepad2", "User", "Mail", "Check", "Menu"] as const).map(

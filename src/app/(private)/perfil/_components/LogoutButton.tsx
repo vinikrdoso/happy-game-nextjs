@@ -12,7 +12,7 @@ export function LogoutButton() {
   return (
     <Button
       onClick={handleLogout}
-      variant="outline"
+      variant="secondary"
       className="border-primary-green-base bg-transparent hover:bg-primary-green-base/10 text-neutral-950 dark:text-white"
     >
       <LogOut className="h-4 w-4" />
@@ -20,4 +20,3 @@ export function LogoutButton() {
     </Button>
   );
 }
-

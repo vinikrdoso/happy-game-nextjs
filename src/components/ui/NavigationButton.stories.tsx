@@ -25,6 +25,7 @@ export const Acervo: Story = {
 };
 
 export const Group: Story = {
+  args: { href: "/feed", icon: "Home", name: "Feed" },
   render: () => (
     <div className="flex gap-2">
       <NavigationButton href="/feed" icon="Home" name="Feed" />

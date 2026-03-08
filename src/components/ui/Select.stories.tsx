@@ -14,9 +14,6 @@ const meta = {
   component: Select,
   parameters: { layout: "centered" },
   tags: ["autodocs"],
-  argTypes: {
-    size: { control: "select", options: ["medium", "large"] },
-  },
   decorators: [
     (Story) => (
       <div className="w-64">
@@ -30,7 +27,7 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
-  render: (args) => (
+  render: () => (
     <Select>
       <SelectTrigger size="medium">
         <SelectValue placeholder="Selecione..." />

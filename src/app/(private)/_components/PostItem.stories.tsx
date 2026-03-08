@@ -27,6 +27,7 @@ export const Default: Story = {
     authorName: "Technomancer",
     dateAndComments: "05 Mar - 13 Comentários",
     badges: ["Dicas", "Opinião"],
+    href: "/feed/1",
   },
 };
 
@@ -49,5 +50,6 @@ export const NoBadges: Story = {
     title: "Post sem badges",
     authorName: "User",
     dateAndComments: "01 Mar - 0 Comentários",
+    href: "/feed/1",
   },
 };

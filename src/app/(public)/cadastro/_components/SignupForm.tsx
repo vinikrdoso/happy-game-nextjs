@@ -56,7 +56,7 @@ export function SignupForm() {
 
   const handleInputChange = (
     field: keyof SignupFormData,
-    value: string | boolean | Platform | ""
+    value: string | boolean | Platform | "",
   ) => {
     setFormData((prev) => ({ ...prev, [field]: value }));
     validateSingleField(field, value, { ...formData, [field]: value });
@@ -231,10 +231,10 @@ export function SignupForm() {
       </div>
 
       <div className="text-center mb-8">
-        <H2 className="mb-2">
-          {getStepTitle()}
-        </H2>
-        <Paragraph className="text-text-muted">Etapa {currentStep} de 4</Paragraph>
+        <H2 className="mb-2">{getStepTitle()}</H2>
+        <Paragraph className="text-text-muted">
+          Etapa {currentStep} de 4
+        </Paragraph>
       </div>
 
       <form onSubmit={handleSubmit} className="space-y-6">
@@ -244,7 +244,7 @@ export function SignupForm() {
           {currentStep > 1 && (
             <Button
               type="button"
-              variant="outline"
+              variant="secondary"
               onClick={handlePrevious}
               className="flex-1"
             >
@@ -277,7 +277,7 @@ interface StepProps {
   errors: ValidationErrors;
   onChange: (
     field: keyof SignupFormData,
-    value: string | boolean | Platform | ""
+    value: string | boolean | Platform | "",
   ) => void;
 }
 
@@ -296,7 +296,9 @@ function Step1PersonalInfo({ formData, errors, onChange }: StepProps) {
             className={errors.fullName ? "border-destructive" : ""}
           />
           {errors.fullName && (
-            <Paragraph variant="text3" className="text-destructive">{errors.fullName}</Paragraph>
+            <Paragraph variant="text3" className="text-destructive">
+              {errors.fullName}
+            </Paragraph>
           )}
         </div>
 
@@ -311,7 +313,9 @@ function Step1PersonalInfo({ formData, errors, onChange }: StepProps) {
             className={errors.nickname ? "border-destructive" : ""}
           />
           {errors.nickname && (
-            <Paragraph variant="text3" className="text-destructive">{errors.nickname}</Paragraph>
+            <Paragraph variant="text3" className="text-destructive">
+              {errors.nickname}
+            </Paragraph>
           )}
         </div>
       </div>
@@ -328,7 +332,9 @@ function Step1PersonalInfo({ formData, errors, onChange }: StepProps) {
             className={errors.email ? "border-destructive" : ""}
           />
           {errors.email && (
-            <Paragraph variant="text3" className="text-destructive">{errors.email}</Paragraph>
+            <Paragraph variant="text3" className="text-destructive">
+              {errors.email}
+            </Paragraph>
           )}
         </div>
 
@@ -343,7 +349,9 @@ function Step1PersonalInfo({ formData, errors, onChange }: StepProps) {
             className={errors.phone ? "border-destructive" : ""}
           />
           {errors.phone && (
-            <Paragraph variant="text3" className="text-destructive">{errors.phone}</Paragraph>
+            <Paragraph variant="text3" className="text-destructive">
+              {errors.phone}
+            </Paragraph>
           )}
         </div>
       </div>
@@ -365,7 +373,9 @@ function Step2Password({ formData, errors, onChange }: StepProps) {
           className={errors.password ? "border-destructive" : ""}
         />
         {errors.password && (
-          <Paragraph variant="text3" className="text-destructive">{errors.password}</Paragraph>
+          <Paragraph variant="text3" className="text-destructive">
+            {errors.password}
+          </Paragraph>
         )}
         <Paragraph variant="text4" className="text-text-muted">
           Mínimo 6 caracteres com pelo menos uma maiúscula, uma minúscula e um
@@ -384,7 +394,9 @@ function Step2Password({ formData, errors, onChange }: StepProps) {
           className={errors.confirmPassword ? "border-destructive" : ""}
         />
         {errors.confirmPassword && (
-          <Paragraph variant="text3" className="text-destructive">{errors.confirmPassword}</Paragraph>
+          <Paragraph variant="text3" className="text-destructive">
+            {errors.confirmPassword}
+          </Paragraph>
         )}
       </div>
     </div>
@@ -431,7 +443,9 @@ function Step3Preferences({
           </SelectContent>
         </Select>
         {errors.platform && (
-          <Paragraph variant="text3" className="text-destructive">{errors.platform}</Paragraph>
+          <Paragraph variant="text3" className="text-destructive">
+            {errors.platform}
+          </Paragraph>
         )}
       </div>
 
@@ -459,7 +473,9 @@ function Step3Preferences({
           ))}
         </div>
         {errors.genres && (
-          <Paragraph variant="text3" className="text-destructive">{errors.genres}</Paragraph>
+          <Paragraph variant="text3" className="text-destructive">
+            {errors.genres}
+          </Paragraph>
         )}
       </div>
     </div>
@@ -503,7 +519,9 @@ function Step4Finalization({ formData, errors, onChange }: StepProps) {
         </Label>
       </div>
       {errors.acceptTerms && (
-        <Paragraph variant="text3" className="text-destructive ml-6">{errors.acceptTerms}</Paragraph>
+        <Paragraph variant="text3" className="text-destructive ml-6">
+          {errors.acceptTerms}
+        </Paragraph>
       )}
     </div>
   );

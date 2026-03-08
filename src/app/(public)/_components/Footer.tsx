@@ -29,8 +29,7 @@ export default function Footer() {
             return (
               <Button
                 key={social.label}
-                variant="outline"
-                size="icon-xl"
+                variant="secondary"
                 className="bg-neutral-100 dark:bg-neutral-800 border-0 hover:bg-neutral-200 dark:hover:bg-neutral-900"
                 aria-label={social.label}
                 asChild

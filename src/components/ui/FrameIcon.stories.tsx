@@ -21,6 +21,7 @@ export const Default: Story = {
 };
 
 export const Variants: Story = {
+  args: { name: "Rocket" },
   render: () => (
     <div className="flex items-center gap-4">
       <FrameIcon name="Rocket" variant="primary" />
@@ -32,6 +33,7 @@ export const Variants: Story = {
 };
 
 export const Sizes: Story = {
+  args: { name: "Trophy" },
   render: () => (
     <div className="flex items-center gap-4">
       <FrameIcon name="Trophy" size="sm" />
