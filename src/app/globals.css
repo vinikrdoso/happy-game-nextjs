@@ -133,6 +133,7 @@
   --color-text-tertiary: var(--text-tertiary);
   --color-text-surface-primary: var(--text-surface-primary);
   --color-text-surface-secondary: var(--text-surface-secondary);
+  --color-text-surface-tertiary: var(--text-surface-tertiary);
   --color-text-highlight-purple: var(--text-highlight-purple);
   --color-text-highlight-green: var(--text-highlight-green);
   --color-bg-primary: var(--bg-primary);
@@ -172,6 +173,7 @@
   --text-tertiary: var(--color-neutral-700);
   --text-surface-primary: var(--color-neutral-50);
   --text-surface-secondary: var(--color-neutral-400);
+  --text-surface-tertiary: var(--color-brand-purple-400);
   --text-highlight-purple: var(--color-brand-purple-500);
   --text-highlight-green: var(--color-brand-green-900);
 
@@ -240,6 +242,7 @@
   --text-tertiary: var(--color-neutral-500);
   --text-surface-primary: var(--color-neutral-50);
   --text-surface-secondary: var(--color-neutral-400);
+  --text-surface-tertiary: var(--color-brand-purple-400);
   --text-highlight-purple: var(--color-brand-purple-500);
   --text-highlight-green: var(--color-brand-green-100);
 

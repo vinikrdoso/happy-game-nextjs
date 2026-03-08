@@ -24,21 +24,21 @@ export function Navbar({
     <header
       className={cn(
         "flex h-14 md:h-20 w-full items-center border-b border-border-primary bg-bg-primary",
-        className
+        className,
       )}
     >
       <div
         className={cn(
           "flex w-full items-center justify-between gap-4 px-4 md:px-6",
-          containerClassName
+          containerClassName,
         )}
       >
         <div className="flex shrink-0 items-center">{logo}</div>
 
         <nav
           className={cn(
-            "flex flex-1 items-center justify-center gap-2",
-            mobileRightActions != null && "hidden md:flex"
+            "flex flex-1 items-center justify-end gap-2",
+            mobileRightActions != null && "hidden md:flex",
           )}
           aria-label="Navegação principal"
         >
@@ -48,7 +48,7 @@ export function Navbar({
         <div
           className={cn(
             "shrink-0 items-center gap-2",
-            mobileRightActions != null ? "hidden md:flex" : "flex"
+            mobileRightActions != null ? "hidden md:flex" : "flex",
           )}
         >
           {rightActions}
