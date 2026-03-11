@@ -4,6 +4,7 @@ import * as React from "react";
 
 import { cn } from "@/lib/utils";
 import { Icon } from "@/components/ui/Icon";
+import Image from "next/image";
 
 export interface AvatarProps extends React.HTMLAttributes<HTMLDivElement> {
   src?: string | null;
@@ -13,8 +14,7 @@ export interface AvatarProps extends React.HTMLAttributes<HTMLDivElement> {
 
 const Avatar = React.forwardRef<HTMLDivElement, AvatarProps>(
   ({ src, alt = "", size = 50, className, ...props }, ref) => {
-    const [imgError, setImgError] = React.useState(false);
-    const showImage = Boolean(src && !imgError);
+    const showImage = !!src;
 
     return (
       <div
@@ -29,11 +29,12 @@ const Avatar = React.forwardRef<HTMLDivElement, AvatarProps>(
         {...props}
       >
         {showImage ? (
-          <img
+          <Image
             src={src ?? ""}
             alt={alt}
             className="h-full w-full object-cover"
-            onError={() => setImgError(true)}
+            width={50}
+            height={50}
           />
         ) : (
           <Icon

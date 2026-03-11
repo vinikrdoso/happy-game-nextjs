@@ -40,8 +40,8 @@ const variantToClasses: Record<TypographyVariant, string> = {
   heading2: "text-[24px] md:text-[32px] font-bold",
   heading3: "text-[20px] md:text-[24px] font-bold",
   heading4: "text-[18px] md:text-[20px] font-bold",
-  display1: "font-heading text-[72px] md:text-[100px] font-bold",
-  display2: "font-heading text-[56px] md:text-[64px] font-bold",
+  display1: "font-heading text-[48px] md:text-[80px] font-bold",
+  display2: "font-heading text-[44px] md:text-[64px] font-bold",
   display3: "font-heading text-[40px] md:text-[56px] font-bold",
   display4: "font-heading text-[32px] md:text-[48px] font-bold",
 };
@@ -122,6 +122,10 @@ const createTypographyComponent = <T extends HTMLElement>(
   return Component;
 };
 
+const Display1 = createTypographyComponent<HTMLHeadingElement>(
+  "display1",
+  "h1",
+);
 const H1 = createTypographyComponent<HTMLHeadingElement>("heading1", "h1");
 const H2 = createTypographyComponent<HTMLHeadingElement>("heading2", "h2");
 const H3 = createTypographyComponent<HTMLHeadingElement>("heading3", "h3");
@@ -129,4 +133,4 @@ const H4 = createTypographyComponent<HTMLHeadingElement>("heading4", "h4");
 const Paragraph = createTypographyComponent<HTMLParagraphElement>("text2", "p");
 const Span = createTypographyComponent<HTMLSpanElement>("text2", "span");
 
-export { H1, H2, H3, H4, Paragraph, Span };
+export { H1, H2, H3, H4, Paragraph, Span, Display1 };

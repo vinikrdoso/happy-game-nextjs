@@ -99,7 +99,7 @@ export function PrivateNavbar({ session }: PrivateNavbarProps) {
                   <Button variant="secondary" size="large" asChild>
                     <Link href="/perfil" className="flex items-center gap-2">
                       <Avatar
-                        src={user?.image ?? undefined}
+                        src={user?.image}
                         alt={user?.name ?? ""}
                         size={24}
                         className="h-6 w-6"
