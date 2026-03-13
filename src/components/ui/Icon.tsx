@@ -90,7 +90,7 @@ export interface IconProps extends Omit<
 }
 
 const Icon = React.forwardRef<SVGSVGElement, IconProps>(
-  ({ name, size = 24, className, ...props }, ref) => {
+  ({ name, size = 24, className, "aria-hidden": ariaHidden = true, ...props }, ref) => {
     const LucideIcon = iconMap[name];
     if (!LucideIcon) {
       if (process.env.NODE_ENV === "development") {
@@ -105,6 +105,7 @@ const Icon = React.forwardRef<SVGSVGElement, IconProps>(
         ref={ref}
         size={size}
         className={cn("shrink-0", className)}
+        aria-hidden={ariaHidden}
         {...props}
       />
     );

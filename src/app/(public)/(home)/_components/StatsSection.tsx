@@ -9,7 +9,7 @@ export function StatsSection() {
             <H2>
               Estatísticas Impactantes da Indústria de Jogos
             </H2>
-            <Paragraph variant="text1" className="dark:text-neutral-400 text-neutral-900">
+            <Paragraph variant="text1" className="dark:text-neutral-300 text-neutral-900">
               A indústria de jogos movimenta bilhões de reais anualmente,
               atraindo milhões de jogadores. Com o crescimento das plataformas
               sociais, a conexão entre gamers nunca foi tão evidente.
@@ -22,7 +22,7 @@ export function StatsSection() {
               <Span variant="display3" className="text-primary-green-base group-hover:scale-105 inline-block transition-transform">
                 75%
               </Span>
-              <Paragraph className="text-neutral-400">
+              <Paragraph className="text-neutral-300">
                 dos jogadores buscam comunidades online para interagir
               </Paragraph>
             </div>
@@ -30,7 +30,7 @@ export function StatsSection() {
               <Span variant="display3" className="text-primary-green-base group-hover:scale-105 inline-block transition-transform">
                 80%
               </Span>
-              <Paragraph className="text-neutral-400">
+              <Paragraph className="text-neutral-300">
                 dos jogos são adquiridos através de recomendações
               </Paragraph>
             </div>

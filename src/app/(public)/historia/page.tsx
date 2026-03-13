@@ -1,5 +1,6 @@
 "use client";
 
+import { useState, useRef, useCallback } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/Button";
@@ -7,9 +8,10 @@ import {
   Carousel,
   CarouselContent,
   CarouselItem,
+  type CarouselApi,
 } from "@/components/ui/Carousel";
 import { H1, H2, Paragraph, Span } from "@/components/ui/Typography";
-import { Rocket, Gamepad2, Box, Users, Headphones } from "lucide-react";
+import { Rocket, Gamepad2, Box, Users, Headphones, Pause, Play } from "lucide-react";
 import Autoplay from "embla-carousel-autoplay";
 import {
   TimelineItem,
@@ -17,6 +19,24 @@ import {
 } from "@/app/(public)/_components/TimelineItem";
 
 export default function Historia() {
+  const [isPaused, setIsPaused] = useState(false);
+  const [api, setApi] = useState<CarouselApi>();
+  const autoplayRef = useRef(
+    Autoplay({ delay: 3000, stopOnInteraction: false })
+  );
+
+  const togglePause = useCallback(() => {
+    const autoplay = autoplayRef.current;
+    if (!autoplay) return;
+
+    if (isPaused) {
+      autoplay.play();
+    } else {
+      autoplay.stop();
+    }
+    setIsPaused(!isPaused);
+  }, [isPaused]);
+
   const backgroundImages = [
     "https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "https://images.unsplash.com/photo-1525323559199-ee5b69062cce?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -25,8 +45,6 @@ export default function Historia() {
     "https://images.unsplash.com/photo-1571716846319-21f2bf095516?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "https://images.unsplash.com/photo-1498736297812-3a08021f206f?q=80&w=1179&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   ];
-
-  const autoplayPlugin = Autoplay({ delay: 3000, stopOnInteraction: false });
 
   const timelineData: TimelineItemData[] = [
     {
@@ -74,6 +92,20 @@ export default function Historia() {
   return (
     <div className="min-h-screen bg-color-background text-neutral-950 dark:text-neutral-50">
       <section className="relative h-[calc(100vh-72px)] w-full overflow-hidden">
+        {/* Botão de pausa/play do carousel */}
+        <button
+          onClick={togglePause}
+          className="absolute top-4 right-4 z-20 p-3 bg-black/60 hover:bg-black/80 backdrop-blur-sm rounded-full text-white transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black"
+          aria-label={isPaused ? "Retomar apresentação de slides" : "Pausar apresentação de slides"}
+          aria-pressed={isPaused}
+        >
+          {isPaused ? (
+            <Play className="h-5 w-5" aria-hidden="true" />
+          ) : (
+            <Pause className="h-5 w-5" aria-hidden="true" />
+          )}
+        </button>
+
         <div className="absolute inset-0 w-full h-full [&>div]:h-full">
           <Carousel
             opts={{
@@ -82,7 +114,8 @@ export default function Historia() {
               slidesToScroll: 1,
               containScroll: "trimSnaps",
             }}
-            plugins={[autoplayPlugin]}
+            plugins={[autoplayRef.current]}
+            setApi={setApi}
             className="w-full h-full"
           >
             <CarouselContent className="h-full [&>div:first-child]:h-full [&>div:first-child]:w-full [&>div:first-child]:overflow-hidden [&>div:last-child]:h-full [&>div:last-child]:ml-0! [&>div:last-child]:w-full">
@@ -98,7 +131,8 @@ export default function Historia() {
                   >
                     <Image
                       src={src}
-                      alt={`Gaming background ${index + 1}`}
+                      alt=""
+                      role="presentation"
                       fill
                       className="object-cover blur-in-xs scale-110 brightness-50"
                       sizes="100vw"
