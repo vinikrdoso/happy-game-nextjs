@@ -57,7 +57,7 @@ export function CommunitiesSection() {
           <H2 className="mb-4">
             Descubra sua comunidade gamer
           </H2>
-          <Paragraph variant="text1" className="dark:text-neutral-400 text-neutral-600">
+          <Paragraph variant="text1" className="dark:text-neutral-300 text-neutral-600">
             Nostálgico dos clássicos? Competitivo nas ranked? Ou só curte jogar?
             Aqui todo gamer tem seu espaço para brilhar e se conectar.
           </Paragraph>
@@ -68,14 +68,22 @@ export function CommunitiesSection() {
           {communities.map((community, index) => (
             <Card
               key={index}
-              className="h-full flex flex-col  cursor-pointer overflow-hidden border-neutral-700 hover:border-primary-green-base hover:-translate-y-2 transition-all duration-300 hover:shadow-lg hover:shadow-primary-green-base/20"
+              className="group relative h-full flex flex-col overflow-hidden border-neutral-700 hover:border-primary-green-base hover:-translate-y-2 transition-all duration-300 hover:shadow-lg hover:shadow-primary-green-base/20 focus-within:border-primary-green-base focus-within:ring-2 focus-within:ring-primary-green-base focus-within:ring-offset-2 focus-within:ring-offset-neutral-900"
             >
+              <Link
+                href={community.link}
+                className="absolute inset-0 z-10 focus:outline-none"
+                aria-label={`${community.title} - ${community.linkText}`}
+              >
+                <span className="sr-only">{community.linkText}</span>
+              </Link>
               <div className="aspect-video overflow-hidden relative">
                 <Image
                   src={community.image}
-                  alt={community.title}
+                  alt=""
                   fill
-                  className="object-cover hover:scale-110 transition-transform duration-300"
+                  className="object-cover group-hover:scale-110 transition-transform duration-300"
+                  aria-hidden="true"
                 />
               </div>
               <CardHeader>
@@ -85,20 +93,20 @@ export function CommunitiesSection() {
                 <CardTitle className="text-xl">{community.title}</CardTitle>
               </CardHeader>
               <CardContent className="grow">
-                <CardDescription className="text-neutral-400">
+                <CardDescription className="text-neutral-300">
                   {community.description}
                 </CardDescription>
               </CardContent>
               <CardFooter>
-                <Link
-                  href={community.link}
-                  className="text-primary-green-base hover:text-primary-green-darker-1 transition-colors font-semibold group"
+                <span
+                  className="text-primary-green-base group-hover:text-primary-green-darker-1 transition-colors font-semibold"
+                  aria-hidden="true"
                 >
                   {community.linkText}{" "}
                   <Span className="inline-block group-hover:translate-x-1 transition-transform">
                     →
                   </Span>
-                </Link>
+                </span>
               </CardFooter>
             </Card>
           ))}
